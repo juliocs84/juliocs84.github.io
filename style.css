@@ -122,17 +122,33 @@ nav a:hover {
         }
     }
     
+/* Feedback visual quando o usuário passa o mousejá tem */
     .card { 
         background: white; 
         padding: 30px; 
         border-radius: 10px; 
         box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+        
+        /* Novas propriedades para modernizar */
+        transition: all 0.3s ease; /* Faz a animação durar 0.3 segundos */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza o conteúdo se preferir */
+        text-align: center;
     }
-
+    
+    /* Efeito de interação ao passar o mouse */
+    .card:hover {
+        transform: translateY(-8px); /* Sobe o card levemente */
+        box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* Sombra mais profunda */
+        border: 1px solid var(--primary); /* Opcional: bordinha na cor do tema */
+    }
+    
+    /* Mantendo o estilo do ícone que você já tinha */
     .card i { 
-        font-size: 2rem; 
+        font-size: 2.5rem; /* Aumentei um pouco para destaque */
         color: var(--primary); 
-        margin-bottom: 15px; 
+        margin-bottom: 20px; 
     }
     
     footer {
