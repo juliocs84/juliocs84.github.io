@@ -221,7 +221,48 @@ nav a:hover {
         color: var(--primary); 
         margin-bottom: 20px; 
     }
+
+    .faq-grid {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
     
+    details {
+        background: var(--card-bg); /* Usa a variável que já definimos */
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+    }
+    
+    summary {
+        padding: 20px;
+        font-weight: 600; /* Mesma espessura do menu */
+        cursor: pointer;
+        list-style: none; /* Remove a setinha padrão do navegador */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--primary);
+    }
+    
+    details p {
+        padding: 0 20px 20px;
+        line-height: 1.6;
+        color: var(--text-color);
+    }
+    
+    /* Efeito de destaque ao abrir */
+    details[open] {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    /* Ajuste para o Dark Mode */
+    body.dark-mode details {
+        border-color: rgba(255,255,255,0.1);
+    }
+
 footer {
     background-color: #2c2c2c; /* Cinza escuro profissional como no print */
     color: #ffffff;
