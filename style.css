@@ -11,16 +11,19 @@ body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; }
 
 /* CABEÇALHO - O segredo está aqui */
 header {
-    padding: 0 10%;
-    height: 90px; /* Altura generosa para o respiro */
     display: flex;
-    justify-content: space-between; /* Empurra o nome para um lado e menu para o outro */
-    align-items: center;            /* Alinha verticalmente */
-    position: sticky;
-    top: 0;
-    background: var(--white);
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    justify-content: space-between; /* Empurra o nome para a esquerda e o menu para a direita */
+    align-items: center;            /* Centraliza verticalmente todos os itens */
+    padding: 0 10%;
+    height: 80px;
+    background: #fff;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Cria um buraco de 30px entre cada item do menu */
+    list-style: none;
 }
 
 .logo {
@@ -28,13 +31,6 @@ header {
     font-weight: 600;
     color: var(--primary);
     white-space: nowrap; /* Não deixa o nome quebrar linha */
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 40px;           /* Aumentei o espaço para não grudarem */
-    align-items: center; /* Alinha o texto com o botão */
 }
 
 nav a { 
