@@ -14,7 +14,7 @@ body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; }
 /* AJUSTE NO HEADER */
 header {
     padding: 0 10%; /* Removi o padding vertical fixo */
-    height: 90px;   /* Defini uma altura fixa para facilitar o alinhamento central */
+    height: 75px;   /* Defini uma altura fixa para facilitar o alinhamento central */
     display: flex;
     justify-content: space-between;
     align-items: center; 
