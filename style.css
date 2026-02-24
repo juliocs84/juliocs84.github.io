@@ -117,6 +117,27 @@ nav a:hover {
     border-radius: 50px; /* Bordas arredondadas são mais amigáveis */
 }
 
+/* ... código anterior (Header, Hero, etc.) ... */
+
+/* SEÇÃO DE FRASE DE IMPACTO (QUOTE) */
+.quote-section {
+    background-color: var(--secondary); /* Cor leve para dar destaque */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.main-quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--primary); /* Azul da marca */
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* ... código seguinte (#sobre, #especialidades, etc.) ... */
+
 /* CONTEÚDO RESTANTE */
 .hero { 
     background: linear-gradient(rgba(90, 140, 160, 0.8), rgba(90, 140, 160, 0.8)), 
