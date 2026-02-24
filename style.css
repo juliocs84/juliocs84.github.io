@@ -11,41 +11,71 @@ body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; }
 
 .container { padding: 80px 10%; max-width: 1200px; margin: auto; text-align: center; }
 
+/* AJUSTE NO HEADER */
 header {
-    padding: 15px 10%;
+    padding: 0 10%; /* Removi o padding vertical fixo */
+    height: 80px;   /* Defini uma altura fixa para facilitar o alinhamento central */
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Isso alinha tudo verticalmente ao centro */
+    align-items: center; 
     position: sticky;
     top: 0;
     background: var(--white);
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
+
 .logo {
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--primary);
-    margin: 0; /* Remove margens que podem desalinhá-la */
+    line-height: 1; /* Força o texto a não ter sobra em cima ou embaixo */
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Garante que o nav use a altura total do header */
 }
 
 nav ul {
     display: flex;
     list-style: none;
     gap: 30px;
-    align-items: center; /* Alinha os links de texto com o botão */
+    align-items: center; 
     margin: 0;
+    padding: 0;
 }
+
+/* AJUSTE NOS LINKS */
+nav a { 
+    text-decoration: none; 
+    color: var(--dark); 
+    font-weight: 400;
+    line-height: 1; /* Alinha o texto base com o botão */
+    display: inline-block;
+}
+
 .btn-nav {
     background: var(--primary);
     color: white !important;
-    padding: 10px 22px;
+    padding: 0 22px; /* Padding apenas nas laterais */
+    height: 45px;    /* Altura fixa para o botão */
     border-radius: 8px;
     transition: 0.3s;
-    display: inline-flex; /* Ajuda no alinhamento do texto interno */
-    align-items: center;
+    display: flex;   /* Mudado para flex */
+    align-items: center; /* Centraliza o texto "Agendar" dentro do botão */
+    justify-content: center;
+    text-decoration: none;
 }
-nav a { text-decoration: none; color: var(--dark); font-weight: 400; }
+
+.btn-nav:hover {
+    background: #466d7d;
+}
+
+/* --- RESTANTE DO CSS --- */
 
 .hero { background: linear-gradient(rgba(90, 140, 160, 0.8), rgba(90, 140, 160, 0.8)), url('https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?auto=format&fit=crop&w=1350&q=80'); 
         height: 80vh; background-size: cover; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 5%; }
