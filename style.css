@@ -36,10 +36,16 @@ nav ul {
     align-items: center; /* Alinha os links de texto com o botão */
     margin: 0;
 }
-
+.btn-nav {
+    background: var(--primary);
+    color: white !important;
+    padding: 10px 22px;
+    border-radius: 8px;
+    transition: 0.3s;
+    display: inline-flex; /* Ajuda no alinhamento do texto interno */
+    align-items: center;
+}
 nav a { text-decoration: none; color: var(--dark); font-weight: 400; }
-
-.btn-nav { background: var(--primary); color: white !important; padding: 8px 20px; border-radius: 5px; }
 
 .hero { background: linear-gradient(rgba(90, 140, 160, 0.8), rgba(90, 140, 160, 0.8)), url('https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?auto=format&fit=crop&w=1350&q=80'); 
         height: 80vh; background-size: cover; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 5%; }
