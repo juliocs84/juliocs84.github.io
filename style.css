@@ -170,6 +170,10 @@ nav a:hover {
     
     /* Ajuste para tablets e celulares (Responsividade) */
     @media (max-width: 768px) {
+        #especialidades, #faq {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        }
         header {
             padding: 0 10px; /* Reduz o preenchimento lateral no mobile */
         }
@@ -222,12 +226,26 @@ nav a:hover {
         margin-bottom: 20px; 
     }
 
+    /* Diminui o espaço ao fim da seção de FAQ */
+    #faq {
+        padding-bottom: 20px; /* Reduz o respiro interno inferior */
+    }
     .faq-grid {
         max-width: 800px;
         margin: 0 auto;
         padding: 20px 0;
+        margin-bottom: 0; /* Remove margens externas que podem estar empurrando a seção de baixo */
+    }
+        /* Ajusta o topo da seção de Especialidades */
+    #especialidades {
+        padding-top: 30px; /* Diminui a distância entre o título e a seção anterior */
     }
     
+    .section-title {
+        margin-top: 0; /* Garante que o título não tenha margem extra no topo */
+        margin-bottom: 40px; /* Mantém o espaço apenas para os cards abaixo dele */
+    }
+
     details {
         background: var(--card-bg); /* Usa a variável que já definimos */
         margin-bottom: 15px;
