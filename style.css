@@ -245,7 +245,8 @@ nav a:hover {
     
     .section-title {
         margin-top: 0; /* Garante que o título não tenha margem extra no topo */
-        margin-bottom: 40px; /* Mantém o espaço apenas para os cards abaixo dele */
+        margin-bottom: 25px; /* Espaço suficiente para separar, mas sem criar buracos */
+        text-align: center;
     }
 
     details {
