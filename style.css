@@ -96,6 +96,7 @@ nav a:hover {
         max-width: 1200px;
         margin: auto;
         text-align: center;
+    }
     
     .bg-light {
         background: var(--secondary);
