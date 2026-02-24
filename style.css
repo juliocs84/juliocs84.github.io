@@ -35,6 +35,14 @@ header { background: var(--header-bg); }
 
 body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; }
 
+/* Garante que títulos e parágrafos fora dos cards também mudem */
+body.dark-mode h2, 
+body.dark-mode p {
+    color: #f4f7f6;
+}
+
+/* Mas atenção: se você tiver parágrafos DENTRO do card, 
+   o seletor que você já fez (body.dark-mode .card) já cuida disso. */
 /* CABEÇALHO - O segredo está aqui */
 header {
     display: flex;
@@ -167,7 +175,7 @@ nav a:hover {
         }
     }
     
-/* Feedback visual quando o usuário passa o mousejá tem */
+/* Feedback visual quando o usuário passa o mouse já tem */
     .card { 
         background: white; 
         padding: 30px; 
@@ -181,7 +189,17 @@ nav a:hover {
         align-items: center; /* Centraliza o conteúdo se preferir */
         text-align: center;
     }
+    /* No modo escuro */
+    body.dark-mode .card {
+        background-color: #262626; /* Cinza bem escuro */
+        color: #f4f7f6;           /* Texto claro para contraste */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
     
+    /* Garante que os títulos das seções (Sobre Mim, Especialidades) mudem */
+    body.dark-mode h2 {
+        color: #f4f7f6;
+    }
     /* Efeito de interação ao passar o mouse */
     .card:hover {
         transform: translateY(-8px); /* Sobe o card levemente */
