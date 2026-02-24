@@ -173,16 +173,35 @@ nav a:hover {
         margin-bottom: 20px; 
     }
     
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2026 Psicóloga Fernanda Dumangin - CRP 00/00000</p>
-        <div class="social-links">
-            <a href="https://instagram.com/seuperfil" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://linkedin.com/in/seuperfil" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-    </div>
-</footer>
+footer {
+    background-color: #2c2c2c; /* Cinza escuro profissional como no print */
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilizando os ícones para fugir do azul de link padrão */
+.social-links a {
+    color: #ffffff;
+    font-size: 1.5rem; /* Aumenta o tamanho dos ícones */
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.social-links a:hover {
+    color: var(--primary); /* Muda para o azul da logo no hover */
+    opacity: 1;
+    transform: translateY(-3px);
+}
