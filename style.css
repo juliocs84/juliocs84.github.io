@@ -244,6 +244,7 @@ nav a:hover {
         color: var(--primary); 
         margin-bottom: 20px; 
     }
+
  /* Para quem é a terapia? (Identificação) */
     .publico-grid {
         display: grid;
@@ -261,6 +262,31 @@ nav a:hover {
     .publico-item i {
         color: var(--primary);
     }
+    .bg-light-box {
+    background: var(--card-bg);
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 40px;
+    }
+
+/* Abordagem Terapêutica (Autoridade) */
+    .abordagem-content {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    .abordagem-text { flex: 2; min-width: 300px; }
+    .abordagem-badge {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--primary);
+        text-align: center;
+        min-width: 200px;
+    }
+
     /* Diminui o espaço ao fim da seção de FAQ */
     #faq {
         padding-bottom: 20px; /* Reduz o respiro interno inferior */
