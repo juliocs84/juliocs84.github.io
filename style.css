@@ -118,23 +118,11 @@ nav a:hover {
     }
 }
     
-    .card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    
-    /* Garante altura igual entre eles */
-    display: flex;
-    flex-direction: column;
-    height: 100%; 
-}
-    
-    .card i {
-        font-size: 2rem;
-        color: var(--primary);
-        margin-bottom: 15px;
-    }
+    .card { 
+        background: white; 
+        padding: 30px; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
     
     footer {
         background: var(--dark);
