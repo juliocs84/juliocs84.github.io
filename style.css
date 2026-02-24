@@ -262,29 +262,36 @@ nav a:hover {
     .publico-item i {
         color: var(--primary);
     }
-    .bg-light-box {
-    background: var(--card-bg);
-    padding: 50px;
-    border-radius: 20px;
-    margin-top: 40px;
-    }
 
 /* Abordagem Terapêutica (Autoridade) */
+    .bg-light-box {
+        background: var(--card-bg);
+        padding: 50px 20px; /* Reduzi o padding lateral para mobile */
+        border-radius: 20px;
+        margin-top: 40px;
+        text-align: center; /* Centraliza todo o texto interno */
+    }
+    
     .abordagem-content {
         display: flex;
-        align-items: center;
-        gap: 40px;
-        flex-wrap: wrap;
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center;    /* Centraliza os itens no eixo horizontal */
+        gap: 30px;
+        max-width: 800px;
+        margin: 0 auto;         /* Centraliza o container na página */
     }
-    .abordagem-text { flex: 2; min-width: 300px; }
+    
+    .abordagem-text {
+        flex: none; 
+        width: 100%;
+    }
+    
     .abordagem-badge {
-        flex: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
         color: var(--primary);
-        text-align: center;
-        min-width: 200px;
+        gap: 10px;
     }
 
     /* Diminui o espaço ao fim da seção de FAQ */
