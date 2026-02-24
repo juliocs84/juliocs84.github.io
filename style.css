@@ -305,6 +305,23 @@ nav a:hover {
         gap: 10px;
     }
 
+ /* Cronograma e Selo de Atendimento */
+
+    .info-footer-grid {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    }
+    body.dark-mode .info-footer-grid {
+        border-top-color: rgba(255,255,255,0.1);
+    }
+    .info-footer-grid h3 {
+        color: var(--primary);
+        margin-bottom: 10px;
+    }
+
     /* Diminui o espaço ao fim da seção de FAQ */
     #faq {
         padding-bottom: 20px; /* Reduz o respiro interno inferior */
