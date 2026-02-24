@@ -168,24 +168,26 @@ nav a:hover {
         margin-top: 40px;
     }
     
-    /* Ajuste para tablets e celulares (Responsividade) */
-    @media (max-width: 768px) {
-        #especialidades, #faq {
+/* Ajuste para tablets e celulares (Responsividade) */
+@media (max-width: 768px) {
+    #especialidades, 
+    #faq {
         padding-top: 20px;
         padding-bottom: 20px;
-        }
-        header {
-            padding: 0 10px; /* Reduz o preenchimento lateral no mobile */
-        }
+    }
 
-        .logo {
-            gap: 8px; /* Diminui o espaço entre o ícone e o nome */
-        }
+    header {
+        padding: 0 10px; /* Reduz o preenchimento lateral no mobile */
+    }
 
-        .logo span {
-            font-size: 1.1rem; /* Reduz um pouco a fonte para caber melhor à esquerda */
-        }
-}
+    .logo {
+        gap: 8px; /* Diminui o espaço entre o ícone e o nome */
+    }
+
+    .logo span {
+        font-size: 1.1rem; /* Reduz um pouco a fonte */
+    }
+} /* Esta chave fecha a @media e deve estar sozinha na linha */
 
 /* Feedback visual quando o usuário passa o mouse já tem */
     .card { 
@@ -243,7 +245,7 @@ nav a:hover {
     
     .section-title {
         margin-top: 0; /* Garante que o título não tenha margem extra no topo */
-        margin-bottom: 10px; /* Mantém o espaço apenas para os cards abaixo dele */
+        margin-bottom: 40px; /* Mantém o espaço apenas para os cards abaixo dele */
     }
 
     details {
