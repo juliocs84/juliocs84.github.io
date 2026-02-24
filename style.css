@@ -47,6 +47,11 @@ nav a:hover {
     color: var(--primary);
 }
 
+.btn-nav:hover {
+    background: #4a7384; /* Um tom um pouco mais escuro que o primary */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 .btn-nav {
     background: var(--primary);
     color: white !important;
