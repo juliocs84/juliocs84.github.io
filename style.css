@@ -48,7 +48,7 @@ header {
     display: flex;
     justify-content: space-between; /* Empurra o nome para a esquerda e o menu para a direita */
     align-items: center;            /* Centraliza verticalmente todos os itens */
-    padding: 0 10%;
+    padding: 0 5%;
     height: 80px;
     background: rgba(255, 255, 255, 0.8); /* Branco com 80% de opacidade */
     backdrop-filter: blur(10px);        /* Efeito de desfoque no fundo */
@@ -69,11 +69,12 @@ nav ul {
     align-items: center;
     gap: 12px;
     white-space: nowrap;
+    margin-left: -10px; /* Ajuste fino para "puxar" levemente para a esquerda */
 
     /* Ajustes específicos da FONTE para igualar as imagens */
     font-family: 'Inter', sans-serif; /* Fonte moderna e limpa */
     font-size: 1.4rem;               /* Aumentado levemente para dar presença */
-    font-weight: 700;                /* Peso Bold (negrito) como nos prints */
+    font-weight: 600;                /* Peso Bold (negrito) como nos prints */
     color: var(--primary);           /* Cor azul acinzentada definida no seu :root */
     letter-spacing: -0.03em;         /* Aproxima as letras, criando um visual mais premium */
     line-height: 1;                  /* Remove respiros verticais desnecessários */
