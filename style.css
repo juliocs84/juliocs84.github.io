@@ -91,9 +91,54 @@ nav a:hover {
     display: inline-block; 
 }
 
-.container { padding: 80px 10%; max-width: 1200px; margin: auto; text-align: center; }
-.bg-light { background: var(--secondary); padding: 80px 10%; }
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
-.card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.card i { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
-footer { background: var(--dark); color: white; text-align: center; padding: 40px; }
+    .container {
+        padding: 80px 10%;
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+    
+    .bg-light {
+        background: var(--secondary);
+        padding: 80px 10%;
+    }
+    
+    .cards {
+    display: grid;
+    /* Força 3 colunas iguais em telas grandes */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Ajuste para tablets e celulares (Responsividade) */
+@media (max-width: 992px) {
+    .cards {
+        /* Em telas menores, volta a permitir que eles quebrem linha */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+    
+    .card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+    /* Garante altura igual entre eles */
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+    
+    .card i {
+        font-size: 2rem;
+        color: var(--primary);
+        margin-bottom: 15px;
+    }
+    
+    footer {
+        background: var(--dark);
+        color: white;
+        text-align: center;
+        padding: 40px;
+    }
