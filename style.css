@@ -168,13 +168,20 @@ nav a:hover {
     }
     
     /* Ajuste para tablets e celulares (Responsividade) */
-    @media (max-width: 992px) {
-        .cards {
-            /* Em telas menores, volta a permitir que eles quebrem linha */
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    @media (max-width: 768px) {
+        header {
+            padding: 0 10px; /* Reduz o preenchimento lateral no mobile */
         }
-    }
-    
+
+        .logo {
+            gap: 8px; /* Diminui o espaço entre o ícone e o nome */
+        }
+
+        .logo span {
+            font-size: 1.1rem; /* Reduz um pouco a fonte para caber melhor à esquerda */
+        }
+}
+
 /* Feedback visual quando o usuário passa o mouse já tem */
     .card { 
         background: white; 
