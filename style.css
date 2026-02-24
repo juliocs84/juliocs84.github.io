@@ -1,12 +1,35 @@
 html {
     scroll-behavior: smooth;
 }
+/* Cores padrão (Light Mode) */
 :root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: rgba(255, 255, 255, 0.9);
     --primary: #5a8ca0;
     --secondary: #f4f7f6;
-    --dark: #333;
-    --white: #ffffff;
+    --card-bg: #ffffff;
 }
+
+/* Cores para o Dark Mode */
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f4f7f6;
+    --header-bg: rgba(26, 26, 26, 0.9);
+    --secondary: #2d2d2d;
+    --card-bg: #262626;
+}
+
+/* Aplicando as variáveis */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header { background: var(--header-bg); }
+.bg-light { background-color: var(--secondary); }
+.card { background-color: var(--card-bg); color: var(--text-color); }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
