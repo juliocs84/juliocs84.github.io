@@ -111,14 +111,10 @@ nav a:hover {
 }
 
 .btn-nav {
-    background: var(--primary);
-    color: white !important;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(135deg, #5a8ca0, #4a7485);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px; /* Bordas arredondadas são mais amigáveis */
 }
 
 /* CONTEÚDO RESTANTE */
