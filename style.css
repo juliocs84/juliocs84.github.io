@@ -245,6 +245,40 @@ nav a:hover {
         margin-bottom: 20px; 
     }
 
+    .sobre-container {
+    display: flex;
+    align-items: center; /* Alinha a imagem e o texto verticalmente ao centro */
+    gap: 50px;           /* Espaço entre a foto e o texto */
+    margin-top: 30px;
+    flex-wrap: wrap;     /* Faz com que a foto fique em cima do texto no telemóvel */
+}
+
+.sobre-img {
+    flex: 1;
+    min-width: 300px;    /* Tamanho mínimo para a foto não ficar muito pequena */
+}
+
+.sobre-img img {
+    width: 100%;
+    max-width: 400px;    /* Tamanho máximo da foto */
+    border-radius: 20px; /* Bordas arredondadas para combinar com os seus cards */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra suave para dar profundidade */
+}
+
+.sobre-texto {
+    flex: 2;             /* O texto ocupa mais espaço que a foto */
+    min-width: 300px;
+}
+/* Ajuste para ecrãs pequenos (Telemóvel) */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sobre-texto .section-title {
+        text-align: center !important;
+    }
+}
  /* Para quem é a terapia? (Identificação) */
     .publico-grid {
         display: grid;
