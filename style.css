@@ -428,6 +428,12 @@ body.dark-mode .status-badge {
     justify-content: center;
 }
 
+/* Se você estiver usando parágrafos dentro do rodapé, 
+zere a margem inferior do texto de copyright */
+.footer-copyright p {
+    margin-bottom: 5px; /* Reduz o empurrão para baixo */
+}
+
 .social-icon {
     font-size: 1.5rem; /* Tamanho do ícone */
     transition: transform 0.3s ease, color 0.3s ease;
