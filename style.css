@@ -379,8 +379,8 @@ nav a:hover {
     }
 
 .footer {
-    background-color: var(--secondary); /* Usa a cor de fundo suave que definimos */
-    padding: 10px 0;
+    background-color: var(--secondary);
+    padding: 15px 0 !important; /* Reduzi ainda mais o respiro global */
     text-align: center;
     border-top: 1px solid rgba(0,0,0,0.05);
 }
@@ -389,31 +389,32 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px !important; /* Reduz o espaço global entre todos os blocos do rodapé */
-}
-
-.footer-info h3 {
-    color: var(--primary);
-    margin-bottom: 5px;
-    margin-top: 0 !important;   /* Remove qualquer margem superior */
+    gap: 2px !important; /* QUASE ZERADO: Elimina o espaço automático entre blocos */
 }
 
 .footer-crp-status {
     font-size: 0.85rem;
-    line-height: 1.4; /* Reduzido de 1.6 para compactar as linhas internas */
+    line-height: 1.2;      /* Texto mais "junto" para ganhar espaço vertical */
     color: var(--text-color);
     max-width: 600px;
     opacity: 0.9;
-    margin-top: 5px !important; /* REDUZA AQUI: de 25px para 5px */
-    margin-bottom: 0 !important;
+    margin-top: 8px !important; /* REDUZIDO: Tira o grande salto que estava antes */
+    margin-bottom: 2px !important;
 }
 
 .status-badge {
     color: #28a745;
     font-weight: 600;
-    margin-top: 2px !important; /* REDUZA AQUI: de 10px para 2px */
+    margin-top: 0 !important; /* GRUDADO: O status agora fica logo abaixo do Conselho */
 }
 
+.footer-social {
+    margin-top: 5px !important; /* Pequeno toque para não colar no texto de copyright */
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 0 !important;      /* Remove qualquer preenchimento extra */
+}
 /* Ajuste para o Dark Mode */
 body.dark-mode .footer {
     background-color: #1a1a1a;
@@ -423,16 +424,6 @@ body.dark-mode .footer {
 body.dark-mode .status-badge {
     color: #4cd137;
 }
-
-.footer-social {
-    margin-top: 0 !important;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    padding-top: 0 !important; /* ZERADO: remova o respiro superior dos ícones */
-    padding-bottom: 5px;       /* Mantém apenas um toque no fundo */
-}
-
 /* Se você estiver usando parágrafos dentro do rodapé, 
 zere a margem inferior do texto de copyright */
 .footer-copyright p {
