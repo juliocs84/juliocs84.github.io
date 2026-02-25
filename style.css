@@ -388,8 +388,8 @@ nav a:hover {
 .footer-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: center;
+    gap: 5px !important; /* Reduz o espaço global entre todos os blocos do rodapé */
 }
 
 .footer-info h3 {
@@ -441,6 +441,8 @@ zere a margem inferior do texto de copyright */
     transition: transform 0.3s ease, color 0.3s ease;
     color: var(--primary); /* Cor padrão do seu site */
     text-decoration: none;
+    display: inline-block;
+    line-height: 1 !important;
 }
 
 /* Cor específica para Instagram ao passar o mouse */
