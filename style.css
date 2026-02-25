@@ -247,28 +247,31 @@ nav a:hover {
 
     .sobre-container {
     display: flex;
-    align-items: center; /* Alinha a imagem e o texto verticalmente ao centro */
-    gap: 50px;           /* Espaço entre a foto e o texto */
+    align-items: center;    /* Alinha os dois blocos (foto e texto) pelo meio */
+    justify-content: center;
+    gap: 50px;
     margin-top: 30px;
-    flex-wrap: wrap;     /* Faz com que a foto fique em cima do texto no telemóvel */
-}
-
-.sobre-img {
-    flex: 1;
-    min-width: 300px;    /* Tamanho mínimo para a foto não ficar muito pequena */
-}
-
-.sobre-img img {
+    flex-wrap: wrap;
+    }
+   
+    .sobre-img img {
     width: 100%;
-    max-width: 400px;    /* Tamanho máximo da foto */
-    border-radius: 20px; /* Bordas arredondadas para combinar com os seus cards */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra suave para dar profundidade */
-}
+    max-width: 400px;
+    border-radius: 30px; /* Bordas mais curvas como na imagem */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Sombra mais profunda e suave */
+    }  
 
-.sobre-texto {
-    flex: 2;             /* O texto ocupa mais espaço que a foto */
+    .sobre-texto {
+    flex: 2;
     min-width: 300px;
-}
+    display: flex;          /* Transforma a coluna de texto em flex */
+    flex-direction: column; /* Garante que título e parágrafo fiquem um sob o outro */
+    justify-content: center; /* Centraliza o bloco de texto verticalmente */
+    text-align: left;
+    }
+    .sobre-texto h2 {
+        margin-top: 0;          /* Remove margens que podem deslocar o título */
+    }
 /* Ajuste para ecrãs pequenos (Telemóvel) */
 @media (max-width: 768px) {
     .sobre-container {
