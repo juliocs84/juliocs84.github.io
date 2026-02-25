@@ -424,7 +424,7 @@ body.dark-mode .status-badge {
 .footer-social {
     margin-top: 10px;
     display: flex;
-    gap: 15px;
+    gap: 10px;
     justify-content: center;
 }
 
@@ -438,6 +438,7 @@ zere a margem inferior do texto de copyright */
     font-size: 1.5rem; /* Tamanho do ícone */
     transition: transform 0.3s ease, color 0.3s ease;
     color: var(--primary); /* Cor padrão do seu site */
+    text-decoration: none;
 }
 
 /* Cor específica para Instagram ao passar o mouse */
