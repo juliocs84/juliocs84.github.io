@@ -380,7 +380,7 @@ nav a:hover {
 
 .footer {
     background-color: var(--secondary); /* Usa a cor de fundo suave que definimos */
-    padding: 15px 0;
+    padding: 10px 0;
     text-align: center;
     border-top: 1px solid rgba(0,0,0,0.05);
 }
@@ -395,6 +395,7 @@ nav a:hover {
 .footer-info h3 {
     color: var(--primary);
     margin-bottom: 5px;
+    margin-top: 0;
 }
 
 .footer-crp-status {
