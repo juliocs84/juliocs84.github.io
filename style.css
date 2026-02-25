@@ -395,22 +395,23 @@ nav a:hover {
 .footer-info h3 {
     color: var(--primary);
     margin-bottom: 5px;
-    margin-top: 0;
+    margin-top: 0 !important;   /* Remove qualquer margem superior */
 }
 
 .footer-crp-status {
     font-size: 0.85rem;
-    line-height: 1.6;
+    line-height: 1.4; /* Reduzido de 1.6 para compactar as linhas internas */
     color: var(--text-color);
     max-width: 600px;
     opacity: 0.9;
-    margin-top: 25px;
+    margin-top: 5px !important; /* REDUZA AQUI: de 25px para 5px */
+    margin-bottom: 0 !important;
 }
 
 .status-badge {
-    color: #28a745; /* Verde para indicar status positivo/habilitado */
+    color: #28a745;
     font-weight: 600;
-    margin-top: 10px;
+    margin-top: 2px !important; /* REDUZA AQUI: de 10px para 2px */
 }
 
 /* Ajuste para o Dark Mode */
@@ -424,11 +425,12 @@ body.dark-mode .status-badge {
 }
 
 .footer-social {
-    margin-top: 0 !important;   /* Remove qualquer margem superior */
+    margin-top: 0 !important;
     display: flex;
     gap: 15px;
     justify-content: center;
-    padding-top: 5px;           /* Use padding para um ajuste fino */
+    padding-top: 0 !important; /* ZERADO: remova o respiro superior dos ícones */
+    padding-bottom: 5px;       /* Mantém apenas um toque no fundo */
 }
 
 /* Se você estiver usando parágrafos dentro do rodapé, 
