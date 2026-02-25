@@ -403,6 +403,7 @@ nav a:hover {
     color: var(--text-color);
     max-width: 600px;
     opacity: 0.9;
+    margin-top: 25px;
 }
 
 .status-badge {
