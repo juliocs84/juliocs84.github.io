@@ -422,16 +422,18 @@ body.dark-mode .status-badge {
 }
 
 .footer-social {
-    margin-top: 10px;
+    margin-top: 0 !important;   /* Remove qualquer margem superior */
     display: flex;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
+    padding-top: 5px;           /* Use padding para um ajuste fino */
 }
 
 /* Se você estiver usando parágrafos dentro do rodapé, 
 zere a margem inferior do texto de copyright */
 .footer-copyright p {
-    margin-bottom: 5px; /* Reduz o empurrão para baixo */
+    margin-bottom: 0 !important; /* Força a remoção da margem padrão */
+    padding-bottom: 5px; /* Controla o espaço via padding, que é mais preciso */
 }
 
 .social-icon {
