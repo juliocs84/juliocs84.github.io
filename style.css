@@ -379,8 +379,8 @@ nav a:hover {
     }
 
 .footer {
-    background-color: var(--secondary);
-    padding: 15px 0 !important; /* Reduzi ainda mais o respiro global */
+    background-color: var(--secondary); /* Usa a cor de fundo suave que definimos */
+    padding: 10px 0;
     text-align: center;
     border-top: 1px solid rgba(0,0,0,0.05);
 }
@@ -389,31 +389,38 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px !important; /* QUASE ZERADO: Elimina o espaço automático entre blocos */
+    gap: 5px !important; /* Reduz o espaço global entre todos os blocos do rodapé */
+}
+
+.footer-info h3 {
+    color: var(--primary);
+    margin-bottom: 5px;
+    margin-top: 0 !important;   /* Remove qualquer margem superior */
 }
 
 .footer-crp-status {
     font-size: 0.85rem;
-    line-height: 1.2;      /* Texto mais "junto" para ganhar espaço vertical */
+    line-height: 1.4; /* Reduzido de 1.6 para compactar as linhas internas */
     color: var(--text-color);
     max-width: 600px;
     opacity: 0.9;
-    margin-top: 8px !important; /* REDUZIDO: Tira o grande salto que estava antes */
-    margin-bottom: 2px !important;
+    margin-top: 5px !important; /* REDUZA AQUI: de 25px para 5px */
+    margin-bottom: 0 !important;
 }
 
 .status-badge {
     color: #28a745;
     font-weight: 600;
-    margin-top: 0 !important; /* GRUDADO: O status agora fica logo abaixo do Conselho */
+    margin-top: 2px !important; /* REDUZA AQUI: de 10px para 2px */
 }
 
 .footer-social {
-    margin-top: 5px !important; /* Pequeno toque para não colar no texto de copyright */
+    margin-top: 0 !important;
     display: flex;
     gap: 15px;
     justify-content: center;
-    padding: 0 !important;      /* Remove qualquer preenchimento extra */
+    padding-top: 0 !important; /* ZERADO: remova o respiro superior dos ícones */
+    padding-bottom: 5px;       /* Mantém apenas um toque no fundo */
 }
 /* Ajuste para o Dark Mode */
 body.dark-mode .footer {
@@ -455,4 +462,27 @@ zere a margem inferior do texto de copyright */
 /* Ajuste para o Dark Mode (opcional se quiser ícones mais claros) */
 body.dark-mode .social-icon {
     color: var(--text-color);
+}
+/* RESET DE EMERGÊNCIA - COLOQUE NO FINAL DO ARQUIVO */
+footer, .footer {
+    padding-top: 5px !important;    /* Força o topo a encolher */
+    padding-bottom: 5px !important; /* Força o fundo a encolher */
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+.footer-content {
+    gap: 0 !important; /* Elimina qualquer espaço automático entre os itens */
+}
+
+/* Zera as margens de TODOS os elementos dentro do rodapé */
+.footer * {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
+/* Caso exista uma div de container que você não viu, isso a "doma" */
+.container.footer-content {
+    padding: 0 !important;
+    margin: 0 auto !important;
 }
