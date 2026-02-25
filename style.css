@@ -247,31 +247,26 @@ nav a:hover {
 
     .sobre-container {
     display: flex;
-    align-items: center;    /* Alinha os dois blocos (foto e texto) pelo meio */
+    flex-direction: row; /* Força o lado a lado */
+    align-items: center;  /* Centraliza o texto verticalmente com a foto */
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     margin-top: 30px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;    /* Impede que o texto pule para baixo em telas médias */
     }
-   
-    .sobre-img img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 30px; /* Bordas mais curvas como na imagem */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Sombra mais profunda e suave */
-    }  
+
+    .sobre-img {
+        flex: 0 0 auto; /* Mantém a foto no tamanho original sem esticar */
+    }
 
     .sobre-texto {
-    flex: 2;
-    min-width: 300px;
-    display: flex;          /* Transforma a coluna de texto em flex */
-    flex-direction: column; /* Garante que título e parágrafo fiquem um sob o outro */
-    justify-content: center; /* Centraliza o bloco de texto verticalmente */
-    text-align: left;
+        flex: 1; /* O texto ocupa o resto do espaço disponível */
+        text-align: left;
     }
     .sobre-texto h2 {
         margin-top: 0;          /* Remove margens que podem deslocar o título */
     }
+
 /* Ajuste para ecrãs pequenos (Telemóvel) */
 @media (max-width: 768px) {
     .sobre-container {
