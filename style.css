@@ -267,8 +267,11 @@ nav a:hover {
     }
 
     .sobre-texto {
-        flex: 1;                /* O texto ocupa o restante (65%) do espaço */
-        text-align: left;
+        flex: 1;                /* Garante que o texto ocupe o espaço ao lado da foto */
+        display: flex;          /* Necessário para a centralização vertical */
+        flex-direction: column; /* Organiza o título e os parágrafos em coluna */
+        justify-content: center; /* Este é o comando que centraliza o texto na altura da foto */
+        text-align: left;       /* Mantém o alinhamento à esquerda como na imagem */
     }
 
 /* Garante que no celular a foto não fique espremida de lado */
