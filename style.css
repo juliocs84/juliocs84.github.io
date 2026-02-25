@@ -155,6 +155,11 @@ nav a:hover {
 
 .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
 
+.cta-button:hover {
+    background: #4a7384; /* Um tom um pouco mais escuro que o primary */
+    background-color: #128C7E; /* Tom de verde mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Leve subida para interatividade */
+}
 .cta-button { 
     background: #25d366; 
     color: white; 
