@@ -246,35 +246,40 @@ nav a:hover {
     }
 
     .sobre-container {
-    display: flex;
-    flex-direction: row; /* Força o lado a lado */
-    align-items: center;  /* Centraliza o texto verticalmente com a foto */
-    justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
-    flex-wrap: nowrap;    /* Impede que o texto pule para baixo em telas médias */
+        display: flex;
+        flex-direction: row;
+        align-items: center;    /* Centraliza o texto verticalmente com a foto */
+        justify-content: center;
+        gap: 40px;              /* Espaço entre foto e texto */
+        margin-top: 30px;
     }
 
     .sobre-img {
-        flex: 0 0 auto; /* Mantém a foto no tamanho original sem esticar */
+        flex: 0 0 35%;          /* A foto ocupará apenas 35% da largura da linha */
+        max-width: 350px;       /* Limite máximo para não ficar enorme em telas grandes */
+    }
+
+    .sobre-img img {
+        width: 100%;            /* A imagem preenche os 35% definidos acima */
+        height: auto;
+        border-radius: 30px;    /* Bordas arredondadas como na sua foto real */
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     }
 
     .sobre-texto {
-        flex: 1; /* O texto ocupa o resto do espaço disponível */
+        flex: 1;                /* O texto ocupa o restante (65%) do espaço */
         text-align: left;
     }
-    .sobre-texto h2 {
-        margin-top: 0;          /* Remove margens que podem deslocar o título */
-    }
 
-/* Ajuste para ecrãs pequenos (Telemóvel) */
+/* Garante que no celular a foto não fique espremida de lado */
 @media (max-width: 768px) {
     .sobre-container {
         flex-direction: column;
         text-align: center;
     }
-    .sobre-texto .section-title {
-        text-align: center !important;
+    .sobre-img {
+        max-width: 80%;     /* No celular ela pode ser um pouco maior */
+        margin-bottom: 20px;
     }
 }
  /* Para quem é a terapia? (Identificação) */
