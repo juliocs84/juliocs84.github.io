@@ -136,21 +136,23 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/* NOVO TOPO PROFISSIONAL (ESTILO PEDRO RODRIGUES) */
+/* NOVO TOPO PROFISSIONAL */
 .hero { 
-    background-color: #f8f9fa; /* Fundo claro para destacar a foto real */
-    min-height: 80vh;          /* Mantém uma boa altura no topo */
+    background-color: #f8f9fa; 
+    /* REDUÇÃO DE ALTURA: Mudamos de 80vh para 50vh ou auto */
+    min-height: 60vh;          
     display: flex; 
     align-items: center; 
-    padding: 60px 5%;
-    color: var(--text-color); /* Texto escuro para melhor leitura no fundo claro */
+    /* AJUSTE DE RESPIRO: Menos espaço em cima e embaixo */
+    padding: 40px 5%;
+    color: var(--text-color);
 }
 
 .hero-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
