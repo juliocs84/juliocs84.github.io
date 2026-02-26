@@ -136,24 +136,70 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/* ... código seguinte (#sobre, #especialidades, etc.) ... */
-
-/* CONTEÚDO RESTANTE */
+/* NOVO TOPO PROFISSIONAL (ESTILO PEDRO RODRIGUES) */
 .hero { 
-    background: linear-gradient(rgba(90, 140, 160, 0.8), rgba(90, 140, 160, 0.8)), 
-                url('https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?auto=format&fit=crop&w=1350&q=80'); 
-    height: 80vh; 
-    background-size: cover; 
-    background-position: center;
+    background-color: #f8f9fa; /* Fundo claro para destacar a foto real */
+    min-height: 80vh;          /* Mantém uma boa altura no topo */
     display: flex; 
     align-items: center; 
-    justify-content: center; 
-    color: white; 
-    text-align: center; 
-    padding: 0 5%; 
+    padding: 60px 5%;
+    color: var(--text-color); /* Texto escuro para melhor leitura no fundo claro */
 }
 
-.hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left; /* Texto à esquerda como você planejou */
+}
+
+.hero-content h1 { 
+    font-size: 3rem; 
+    margin-bottom: 20px; 
+    color: var(--primary); /* Usa o azul da sua marca */
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 35px;
+    color: #555;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 30px; /* Mantém o padrão arredondado que ficou ótimo no sobre mim */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Sombra para profundidade */
+}
+
+/* AJUSTE PARA CELULAR */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column-reverse; /* Foto aparece acima do texto no celular */
+        text-align: center;
+    }
+    .hero-content {
+        text-align: center;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
 
 .cta-button:hover {
     background: #4a7384; /* Um tom um pouco mais escuro que o primary */
