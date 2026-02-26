@@ -2,30 +2,13 @@ html {
     scroll-behavior: smooth;
 }
 /* Cores padrão (Light Mode) */
-* IMPORTAÇÃO DE FONTES */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;600&display=swap');
-
 :root {
-    /* PALETA VERDE SÁLVIA & OFF-WHITE */
-    --primary: #6F8E8B;        /* Verde sálvia (Equilíbrio) */
-    --secondary: #4F6D6A;      /* Verde profundo (Autoridade) */
-    --bg-light: #F6F4EF;       /* Off-white quente (Acolhimento) */
-    --accent: #D9CFC1;         /* Areia claro (Destaque suave) */
-    --text-color: #2F2F2F;     /* Grafite (Profissionalismo) */
-    --white: #FFFFFF;
-}
-
-/* APLICAÇÃO GERAL */
-body {
-    background-color: var(--bg-light);
-    color: var(--text-color);
-    font-family: 'Lora', serif; /* Texto corrido mais legível e elegante */
-    line-height: 1.8;
-}
-
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif; /* Títulos com sofisticação */
-    font-weight: 700;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: rgba(255, 255, 255, 0.9);
+    --primary: #5a8ca0;
+    --secondary: #f4f7f6;
+    --card-bg: #ffffff;
 }
 
 header { background: var(--header-bg); }
@@ -138,10 +121,16 @@ nav a:hover {
 }
 
 /* NOVO TOPO PROFISSIONAL */
-.hero {
-    background-color: var(--bg-light); /* Remove o cinza frio e usa o off-white */
-    padding: 100px 5%;
-}}
+.hero { 
+    background-color: #f8f9fa; 
+    /* REDUÇÃO DE ALTURA: Mudamos de 80vh para 50vh ou auto */
+    min-height: 60vh;          
+    display: flex; 
+    align-items: center; 
+    /* AJUSTE DE RESPIRO: Menos espaço em cima e embaixo */
+    padding: 40px 5%;
+    color: var(--text-color);
+}
 
 .hero-container {
     display: flex;
@@ -158,9 +147,11 @@ nav a:hover {
     text-align: left; /* Texto à esquerda como você planejou */
 }
 
-.hero-content h1 {
-    color: var(--secondary);
-    font-size: 3.2rem;
+.hero-content h1 { 
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+    color: var(--primary); /* Usa o azul da sua marca */
+    line-height: 1.1;
 }
 
 .hero-content p {
