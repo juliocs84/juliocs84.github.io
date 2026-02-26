@@ -186,7 +186,7 @@ nav a:hover {
     width: 100%;
     max-width: 420px;
     border-radius: 30px; /* Mantém o padrão arredondado que ficou ótimo no sobre mim */
-    height: auto;           /* Mantém a proporção da foto sem achatar */
+   /* height: auto;  */         /* Mantém a proporção da foto sem achatar */
     box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Sombra para profundidade */
 }
 
