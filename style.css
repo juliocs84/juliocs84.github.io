@@ -189,20 +189,6 @@ nav a:hover {
     box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Sombra para profundidade */
 }
 
-/* AJUSTE PARA CELULAR */
-@media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column-reverse; /* Foto aparece acima do texto no celular */
-        text-align: center;
-    }
-    .hero-content {
-        text-align: center;
-    }
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-}
-
 .cta-button:hover {
     background: #4a7384; /* Um tom um pouco mais escuro que o primary */
     background-color: #128C7E; /* Tom de verde mais escuro ao passar o mouse */
