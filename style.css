@@ -191,17 +191,15 @@ nav a:hover {
 
 /* AJUSTE PARA CELULAR */
 @media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column-reverse; /* Foto aparece acima do texto no celular */
-        text-align: center;
+    /* Ajuste do botão para não quebrar */
+    .btn-whatsapp {
+        width: 100%;            /* Faz o botão ocupar a largura disponível */
+        max-width: 300px;       /* Mas limita para não ficar exagerado */
+        padding: 12px 15px;     /* Reduz o respiro interno */
+        font-size: 1rem;        /* Diminui levemente a letra */
+        justify-content: center; /* Garante que o ícone e texto fiquem centralizados */
+        display: inline-flex;
     }
-    .hero-content {
-        text-align: center;
-    }
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-}
 
 .cta-button:hover {
     background: #4a7384; /* Um tom um pouco mais escuro que o primary */
