@@ -11,7 +11,7 @@ html {
     --accent: #D9CFC1;         /* Areia */
     --text-color: #2F2F2F;     /* Grafite */
     --white: #FFFFFF;
-    --header-bg: rgba(246, 244, 239, 0.9);
+    --header-bg: rgba(255, 255, 255, 0.9);
 }
 
 /* 2. CONFIGURAÇÕES GERAIS */
@@ -45,7 +45,6 @@ body.dark-mode p {
     color: #f4f7f6;
 }
 
-/* 1. CORREÇÃO DO CABEÇALHO (Removendo azul antigo) */
 /* 3. CABEÇALHO (FIXO E TRANSPARENTE) */
 header {
     display: flex;
@@ -53,7 +52,7 @@ header {
     align-items: center;
     padding: 0 5%;
     height: 80px;
-    background: var(--bg-light);
+    background: var(--header-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(111, 142, 139, 0.1);
