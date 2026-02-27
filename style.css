@@ -2,13 +2,14 @@ html {
     scroll-behavior: smooth;
 }
 /* Cores padrão (Light Mode) */
+/* 1. CORES E FONTES UNIFICADAS */
 :root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --header-bg: rgba(255, 255, 255, 0.9);
-    --primary: #5a8ca0;
-    --secondary: #f4f7f6;
-    --card-bg: #ffffff;
+    --primary: #6F8E8B;        /* Verde sálvia */
+    --secondary: #4F6D6A;      /* Verde profundo */
+    --bg-light: #F6F4EF;       /* Off-white quente */
+    --accent: #D9CFC1;         /* Areia */
+    --text-color: #2F2F2F;     /* Grafite */
+    --white: #FFFFFF;
 }
 
 header { background: var(--header-bg); }
@@ -208,63 +209,56 @@ nav a:hover {
         gap: 30px;
         margin-top: 40px;
     }
-    /* Estrutura "Zigue-Zague" por todo o site: */
+    /* 2. ESTRUTURA ZIGUE-ZAGUE (O MOTOR) */
     .section-split {
-        padding: 100px 0;
+        padding: 80px 0;
         background-color: var(--white);
     }
     
     .alternate-bg {
-        background-color: var(--accent); /* Usa o tom Areia #D9CFC1 */
+        background-color: var(--bg-light) !important;
     }
     
     .split-container {
-        display: flex;
+        display: flex !important;
         align-items: center;
-        gap: 80px; /* Espaço generoso entre foto e texto */
+        justify-content: space-between;
+        gap: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 5%;
     }
     
-    .split-content h2 {
-        font-size: 2.5rem;
-        margin-bottom: 25px;
-        color: var(--secondary); /* Verde profundo #4F6D6A */
+    .split-content, .split-image {
+        flex: 1;
     }
     
     .inverted {
-        flex-direction: row-reverse; /* Faz o efeito de inversão */
+        flex-direction: row-reverse !important;
     }
     
     .split-image img {
         width: 100%;
-        border-radius: 12px; /* Arredondamento sofisticado */
-        box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        max-width: 480px;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.07);
     }
-/* Isso fará o texto e imagem ficarem LADO A LADO */
-.split-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-    padding: 80px 0;
-}
+    
+    /* 3. TÍTULOS E TEXTOS */
+    .split-content h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        color: var(--secondary);
+        margin-bottom: 20px;
+    }
 
-/* Isso garante que cada um ocupe metade da tela */
-.split-content, .split-image {
-    flex: 1;
-}
-
-/* Isso cria a inversão na segunda seção */
-.inverted {
-    flex-direction: row-reverse;
-}
-
-/* Ajuste das imagens para não ficarem gigantes */
-.split-image img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 15px;
-    display: block;
-    margin: 0 auto;
+/* 4. RESPONSIVIDADE (FIX PARA CELULAR) */
+@media (max-width: 768px) {
+    .split-container, .inverted {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 30px;
+    }
 }
 .link-destaque {
     color: var(--primary);    /* Usa o Verde Sálvia */
