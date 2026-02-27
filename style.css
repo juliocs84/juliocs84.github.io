@@ -1,14 +1,14 @@
-html {
-    scroll-behavior: smooth;
-}
-/* Cores padrão (Light Mode) */
+/* 1. IMPORTAÇÃO DE FONTES E VARIÁVEIS UNIFICADAS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;500&family=Montserrat:wght@600&family=Inter:wght@400;600&display=swap');
+
 :root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
+    --primary: #6F8E8B;        /* Verde sálvia */
+    --secondary: #4F6D6A;      /* Verde profundo */
+    --bg-light: #F6F4EF;       /* Off-white quente */
+    --accent: #D9CFC1;         /* Areia */
+    --text-color: #2F2F2F;     /* Grafite */
+    --white: #FFFFFF;
     --header-bg: rgba(255, 255, 255, 0.9);
-    --primary: #5a8ca0;
-    --secondary: #f4f7f6;
-    --card-bg: #ffffff;
 }
 
 /* Cores para o Dark Mode */
@@ -16,136 +16,91 @@ body.dark-mode {
     --bg-color: #1a1a1a;
     --text-color: #f4f7f6;
     --header-bg: rgba(26, 26, 26, 0.9);
-    --secondary: #2d2d2d;
-    --card-bg: #262626;
+    --secondary: #4F6D6A;
+    --bg-light: #2d2d2d;
+    --accent: #3d3d3d;
 }
 
-/* Aplicando as variáveis */
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+/* 2. CONFIGURAÇÕES GERAIS */
+html { scroll-behavior: smooth; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Lora', serif; 
+    color: var(--text-color); 
+    background-color: var(--white);
+    line-height: 1.6; 
     transition: background-color 0.3s, color 0.3s;
 }
 
-header { background: var(--header-bg); }
-.bg-light { background-color: var(--secondary); }
-.card { background-color: var(--card-bg); color: var(--text-color); }
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; }
-
-/* Garante que títulos e parágrafos fora dos cards também mudem */
-body.dark-mode h2, 
-body.dark-mode p {
-    color: #f4f7f6;
-}
-
-/* Mas atenção: se você tiver parágrafos DENTRO do card, 
-   o seletor que você já fez (body.dark-mode .card) já cuida disso. */
-/* CABEÇALHO - O segredo está aqui */
+/* 3. CABEÇALHO (FIXO E TRANSPARENTE) */
 header {
     display: flex;
-    justify-content: space-between; /* Empurra o nome para a esquerda e o menu para a direita */
-    align-items: center;            /* Centraliza verticalmente todos os itens */
+    justify-content: space-between;
+    align-items: center;
     padding: 0 5%;
     height: 80px;
-    background: rgba(255, 255, 255, 0.8); /* Branco com 80% de opacidade */
-    backdrop-filter: blur(10px);        /* Efeito de desfoque no fundo */
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(111, 142, 139, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: -0.03em;
 }
 
 nav ul {
     display: flex;
     align-items: center;
-    gap: 30px; /* Cria um buraco de 30px entre cada item do menu */
+    gap: 30px;
     list-style: none;
-}
-
-.logo {
-    /* Mantendo suas configurações de estrutura */
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    white-space: nowrap;
-    margin-left: -10px; /* Ajuste fino para "puxar" levemente para a esquerda */
-
-    /* Ajustes específicos da FONTE para igualar as imagens */
-    font-family: 'Inter', sans-serif; /* Fonte moderna e limpa */
-    font-size: 1.4rem;               /* Aumentado levemente para dar presença */
-    font-weight: 600;                /* Peso Bold (negrito) como nos prints */
-    color: var(--primary);           /* Cor azul acinzentada definida no seu :root */
-    letter-spacing: -0.03em;         /* Aproxima as letras, criando um visual mais premium */
-    line-height: 1;                  /* Remove respiros verticais desnecessários */
-}
-
-.logo-icon {
-    width: 40px;
-    height: 40px;
-    background-color: var(--secondary); /* Cor de fundo suave */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-    font-size: 1.2rem;
-    border: 1px solid rgba(90, 140, 160, 0.2);
 }
 
 nav a { 
     text-decoration: none; 
-    color: var(--dark); 
-    font-weight: 400; 
+    color: var(--text-color); 
     transition: 0.3s;
 }
 
-nav a:hover {
-    color: var(--primary);
+nav a:hover { color: var(--primary); }
+
+.btn-nav {
+    background-color: var(--primary) !important;
+    color: var(--white) !important;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .btn-nav:hover {
-    background: #4a7384; /* Um tom um pouco mais escuro que o primary */
-    transform: translateY(-1px);
+    background-color: var(--secondary) !important;
+    transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.btn-nav {
-    background: linear-gradient(135deg, #5a8ca0, #4a7485);
-    border: none;
-    padding: 12px 25px;
-    border-radius: 50px; /* Bordas arredondadas são mais amigáveis */
-}
-
-/* ... código anterior (Header, Hero, etc.) ... */
-
-/* SEÇÃO DE FRASE DE IMPACTO (QUOTE) */
-.quote-section {
-    background-color: var(--secondary); /* Cor leve para dar destaque */
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.main-quote {
-    font-size: 1.5rem;
-    font-style: italic;
-    color: var(--primary); /* Azul da marca */
-    max-width: 700px;
-    margin: 0 auto;
-    font-weight: 300;
-    line-height: 1.6;
-}
-
-/* NOVO TOPO PROFISSIONAL */
+/* 4. HERO SECTION */
 .hero { 
-    background-color: #f8f9fa; 
-    /* REDUÇÃO DE ALTURA: Mudamos de 80vh para 50vh ou auto */
-    min-height: 60vh;          
+    background-color: var(--bg-light);
+    min-height: 65vh;          
     display: flex; 
     align-items: center; 
-    /* AJUSTE DE RESPIRO: Menos espaço em cima e embaixo */
-    padding: 40px 5%;
-    color: var(--text-color);
+    padding: 120px 5% 60px; /* Espaço para o header fixo */
 }
 
 .hero-container {
@@ -158,431 +113,156 @@ nav a:hover {
     width: 100%;
 }
 
-.hero-content {
-    flex: 1;
-    text-align: left; /* Texto à esquerda como você planejou */
-}
-
 .hero-content h1 { 
-    font-size: 2.5rem; 
-    margin-bottom: 20px; 
-    color: var(--primary); /* Usa o azul da sua marca */
-    line-height: 1.1;
-}
-
-.hero-content p {
-    font-size: 1rem;
+    font-size: 3rem; 
+    color: var(--secondary);
     margin-bottom: 20px;
-    color: #555;
-}
-
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+    line-height: 1.1;
 }
 
 .hero-image img {
     width: 100%;
     max-width: 420px;
-    border-radius: 30px; /* Mantém o padrão arredondado que ficou ótimo no sobre mim */
-   /* height: auto;  */         /* Mantém a proporção da foto sem achatar */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Sombra para profundidade */
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* 5. FRASE DE IMPACTO (QUOTE) */
+.quote-section {
+    background-color: var(--accent);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.main-quote {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--secondary);
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+/* 6. MOTOR DO ZIGUE-ZAGUE (CORRIGIDO) */
+.section-split { padding: 100px 0; }
+
+.split-container {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.inverted { flex-direction: row-reverse !important; }
+.split-content, .split-image { flex: 1; }
+
+.split-content h2 {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 25px;
+}
+
+.alternate-bg { background-color: var(--bg-light) !important; }
+.accent-bg { background-color: var(--accent) !important; }
+
+.split-image img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+}
+
+/* 7. BOTÕES E LINKS */
+.cta-button { 
+    background-color: var(--primary);
+    color: var(--white) !important; 
+    padding: 15px 30px; 
+    border-radius: 12px; 
+    font-weight: 600; 
+    display: inline-block; 
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .cta-button:hover {
-    background: #4a7384; /* Um tom um pouco mais escuro que o primary */
-    background-color: #128C7E; /* Tom de verde mais escuro ao passar o mouse */
-    transform: translateY(-2px); /* Leve subida para interatividade */
-}
-.cta-button { 
-    background: #25d366; 
-    color: white; 
-    padding: 15px 30px; 
-    border-radius: 30px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    display: inline-block; 
+    background-color: var(--secondary);
+    transform: translateY(-2px);
 }
 
-    .container {
-        padding: 80px 10%;
-        max-width: 1200px;
-        margin: auto;
-        text-align: center;
-    }
-    
-    .bg-light {
-        background: var(--secondary);
-        padding: 80px 10%;
-    }
-    
-    .cards {
-        display: grid;
-        /* Força 3 colunas iguais em telas grandes */
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 30px;
-        margin-top: 40px;
-    }
-    
-/* Ajuste para tablets e celulares (Responsividade) */
-@media (max-width: 768px) {
-    #especialidades, 
-    #faq {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    header {
-        padding: 0 10px; /* Reduz o preenchimento lateral no mobile */
-    }
-
-    .logo {
-        gap: 8px; /* Diminui o espaço entre o ícone e o nome */
-    }
-
-    .logo span {
-        font-size: 1.1rem; /* Reduz um pouco a fonte */
-    }
-} /* Esta chave fecha a @media e deve estar sozinha na linha */
-
-/* Feedback visual quando o usuário passa o mouse já tem */
-    .card { 
-        background: white; 
-        padding: 30px; 
-        border-radius: 10px; 
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-        
-        /* Novas propriedades para modernizar */
-        transition: all 0.3s ease; /* Faz a animação durar 0.3 segundos */
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centraliza o conteúdo se preferir */
-        text-align: center;
-    }
-    /* No modo escuro */
-    body.dark-mode .card {
-        background-color: #262626; /* Cinza bem escuro */
-        color: #f4f7f6;           /* Texto claro para contraste */
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    /* Garante que os títulos das seções (Sobre Mim, Especialidades) mudem */
-    body.dark-mode h2 {
-        color: #f4f7f6;
-    }
-
-    /* AJUSTE DARK MODE PARA O HERO */
-    body.dark-mode .hero {
-        background-color: #1a1a1a !important; /* Fundo grafite muito escuro */
-        color: #e0e0e0 !important;           /* Texto cinza claro */
-    }
-    
-    body.dark-mode .hero-content h1 {
-        color: #90caf9 !important;           /* Azul claro para o título se destacar */
-    }
-    
-    body.dark-mode .hero-content p {
-        color: #b0b0b0 !important;           /* Descrição com cor suave */
-    }
-    
-    body.dark-mode .hero-image img {
-        border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil para a foto não "sumir" */
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra mais pesada no escuro */
-    }
-
-    /* Efeito de interação ao passar o mouse */
-    .card:hover {
-        transform: translateY(-8px); /* Sobe o card levemente */
-        box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* Sombra mais profunda */
-        border: 1px solid var(--primary); /* Opcional: bordinha na cor do tema */
-    }
-    
-    /* Mantendo o estilo do ícone que você já tinha */
-    .card i { 
-        font-size: 2.5rem; /* Aumentei um pouco para destaque */
-        color: var(--primary); 
-        margin-bottom: 20px; 
-    }
-
-    .sobre-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;    /* Centraliza o texto verticalmente com a foto */
-        justify-content: center;
-        gap: 40px;              /* Espaço entre foto e texto */
-        margin-top: 30px;
-    }
-
-    .sobre-img {
-        flex: 0 0 35%;          /* A foto ocupará apenas 35% da largura da linha */
-        max-width: 350px;       /* Limite máximo para não ficar enorme em telas grandes */
-    }
-
-    .sobre-img img {
-        width: 100%;            /* A imagem preenche os 35% definidos acima */
-        height: auto;
-        border-radius: 30px;    /* Bordas arredondadas como na sua foto real */
-        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    }
-
-    .sobre-texto {
-        flex: 1;                /* Garante que o texto ocupe o espaço ao lado da foto */
-        display: flex;          /* Necessário para a centralização vertical */
-        flex-direction: column; /* Organiza o título e os parágrafos em coluna */
-        justify-content: center; /* Este é o comando que centraliza o texto na altura da foto */
-        text-align: left;       /* Mantém o alinhamento à esquerda como na imagem */
-    }
-
-/* Garante que no celular a foto não fique espremida de lado */
-@media (max-width: 768px) {
-    .sobre-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .sobre-img {
-        max-width: 80%;     /* No celular ela pode ser um pouco maior */
-        margin-bottom: 20px;
-    }
-}
- /* Para quem é a terapia? (Identificação) */
-    .publico-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        margin-top: 30px;
-    }
-    .publico-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 1.1rem;
-        color: var(--text-color);
-    }
-    .publico-item i {
-        color: var(--primary);
-    }
-
-/* Abordagem Terapêutica (Autoridade) */
-    .bg-light-box {
-        background: var(--card-bg);
-        padding: 50px 20px; /* Reduzi o padding lateral para mobile */
-        border-radius: 20px;
-        margin-top: 40px;
-        text-align: center; /* Centraliza todo o texto interno */
-    }
-    
-    .abordagem-content {
-        display: flex;
-        flex-direction: column; /* Empilha os itens verticalmente */
-        align-items: center;    /* Centraliza os itens no eixo horizontal */
-        gap: 30px;
-        max-width: 800px;
-        margin: 0 auto;         /* Centraliza o container na página */
-    }
-    
-    .abordagem-text {
-    flex: none; 
-    width: 100%;
-    text-align: center; /* Adicione esta linha para centralizar o título e o parágrafo */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Garante que elementos internos fiquem no meio */
+.link-destaque {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: underline;
 }
 
-    /* Caso o parágrafo tenha uma largura máxima para leitura, centralizamos ele também */
-    .abordagem-text p {
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .abordagem-badge {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: var(--primary);
-        gap: 10px;
-    }
+/* 8. CARDS E ESPECIALIDADES */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-top: 40px;
+}
 
- /* Cronograma e Selo de Atendimento */
-
-    .info-footer-grid {
-    display: flex;
-    justify-content: space-around;
+.card { 
+    background: var(--white); 
+    padding: 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
     text-align: center;
-    padding: 40px 0;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    }
-    body.dark-mode .info-footer-grid {
-        border-top-color: rgba(255,255,255,0.1);
-    }
-    .info-footer-grid h3 {
-        color: var(--primary);
-        margin-bottom: 10px;
-    }
+}
 
-    /* Diminui o espaço ao fim da seção de FAQ */
-    #faq {
-        padding-bottom: 20px; /* Reduz o respiro interno inferior */
-    }
-    .faq-grid {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px 0;
-        margin-bottom: 0; /* Remove margens externas que podem estar empurrando a seção de baixo */
-    }
-        /* Ajusta o topo da seção de Especialidades */
-    #especialidades {
-        padding-top: 30px; /* Diminui a distância entre o título e a seção anterior */
-    }
+.card:hover {
+    transform: translateY(-10px);
+    border: 1px solid var(--primary);
+}
+
+.card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+
+/* 9. DARK MODE - AJUSTES ESPECÍFICOS */
+body.dark-mode .hero-content h1, 
+body.dark-mode .main-quote,
+body.dark-mode .split-content h2 {
+    color: #9DB7B4; /* Tom mais claro de sálvia para contraste */
+}
+
+body.dark-mode .card {
+    background-color: #262626;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 10. RESPONSIVIDADE */
+@media (max-width: 768px) {
+    header { padding: 0 20px; }
+    nav ul { display: none; } /* Menu hamburguer recomendado aqui */
     
-    .section-title {
-        margin-top: 0; /* Garante que o título não tenha margem extra no topo */
-        margin-bottom: 25px; /* Espaço suficiente para separar, mas sem criar buracos */
+    .hero-container, .split-container, .inverted {
+        flex-direction: column !important;
         text-align: center;
+        gap: 40px;
     }
+    
+    .hero-content h1 { font-size: 2.2rem; }
+    .split-content h2 { font-size: 1.8rem; }
+}
 
-    details {
-        background: var(--card-bg); /* Usa a variável que já definimos */
-        margin-bottom: 15px;
-        border-radius: 8px;
-        border: 1px solid rgba(0,0,0,0.05);
-        transition: all 0.3s ease;
-    }
-    
-    summary {
-        padding: 20px;
-        font-weight: 600; /* Mesma espessura do menu */
-        cursor: pointer;
-        list-style: none; /* Remove a setinha padrão do navegador */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: var(--primary);
-    }
-    
-    details p {
-        padding: 0 20px 20px;
-        line-height: 1.6;
-        color: var(--text-color);
-    }
-    
-    /* Efeito de destaque ao abrir */
-    details[open] {
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    
-    /* Ajuste para o Dark Mode */
-    body.dark-mode details {
-        border-color: rgba(255,255,255,0.1);
-    }
-
+/* 11. RODAPÉ */
 .footer {
-    background-color: var(--secondary); /* Usa a cor de fundo suave que definimos */
-    padding: 10px 0;
+    background-color: var(--bg-light);
+    padding: 40px 0;
     text-align: center;
     border-top: 1px solid rgba(0,0,0,0.05);
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px !important; /* Reduz o espaço global entre todos os blocos do rodapé */
-}
-
-.footer-info h3 {
-    color: var(--primary);
-    margin-bottom: 5px;
-    margin-top: 0 !important;   /* Remove qualquer margem superior */
-}
-
-.footer-crp-status {
-    font-size: 0.85rem;
-    line-height: 1.4; /* Reduzido de 1.6 para compactar as linhas internas */
-    color: var(--text-color);
-    max-width: 600px;
-    opacity: 0.9;
-    margin-top: 5px !important; /* REDUZA AQUI: de 25px para 5px */
-    margin-bottom: 0 !important;
-}
-
-.status-badge {
-    color: #28a745;
-    font-weight: 600;
-    margin-top: 2px !important; /* REDUZA AQUI: de 10px para 2px */
-}
-
-.footer-social {
-    margin-top: 0 !important;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    padding-top: 0 !important; /* ZERADO: remova o respiro superior dos ícones */
-    padding-bottom: 5px;       /* Mantém apenas um toque no fundo */
-}
-/* Ajuste para o Dark Mode */
-body.dark-mode .footer {
-    background-color: #1a1a1a;
-    border-top-color: rgba(255,255,255,0.1);
-}
-
-body.dark-mode .status-badge {
-    color: #4cd137;
-}
-/* Se você estiver usando parágrafos dentro do rodapé, 
-zere a margem inferior do texto de copyright */
-.footer-copyright p {
-    margin-bottom: 0 !important; /* Força a remoção da margem padrão */
-    padding-bottom: 5px; /* Controla o espaço via padding, que é mais preciso */
-}
-
 .social-icon {
-    font-size: 1.5rem; /* Tamanho do ícone */
-    transition: transform 0.3s ease, color 0.3s ease;
-    color: var(--primary); /* Cor padrão do seu site */
-    text-decoration: none;
-    display: inline-block;
-    line-height: 1 !important;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin: 0 10px;
+    transition: 0.3s;
 }
 
-/* Cor específica para Instagram ao passar o mouse */
-.social-icon.instagram:hover {
-    color: #E1306C; /* Rosa oficial do Instagram */
-    transform: scale(1.1);
-}
-
-/* Cor específica para LinkedIn ao passar o mouse */
-.social-icon.linkedin:hover {
-    color: #0077b5; /* Azul oficial do LinkedIn */
-    transform: scale(1.1);
-}
-
-/* Ajuste para o Dark Mode (opcional se quiser ícones mais claros) */
-body.dark-mode .social-icon {
-    color: var(--text-color);
-}
-/* RESET DE EMERGÊNCIA - COLOQUE NO FINAL DO ARQUIVO */
-footer, .footer {
-    padding-top: 5px !important;    /* Força o topo a encolher */
-    padding-bottom: 5px !important; /* Força o fundo a encolher */
-    height: auto !important;
-    min-height: 0 !important;
-}
-
-.footer-content {
-    gap: 0 !important; /* Elimina qualquer espaço automático entre os itens */
-}
-
-/* Zera as margens de TODOS os elementos dentro do rodapé */
-.footer * {
-    margin-top: 2px !important;
-    margin-bottom: 2px !important;
-}
-
-/* Caso exista uma div de container que você não viu, isso a "doma" */
-.container.footer-content {
-    padding: 0 !important;
-    margin: 0 auto !important;
-}
+.social-icon:hover { color: var(--secondary); transform: scale(1.1); }
