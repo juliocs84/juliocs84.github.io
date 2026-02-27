@@ -634,7 +634,7 @@ body.dark-mode .main-quote {
 .frase-apoio {
     font-family: 'Playfair Display', serif !important; /* Mesma fonte dos títulos principais */
     font-size: 1.8rem;
-    color: var(--secondary); /* Verde Profundo #4F6D6A para autoridade */
+    color: #F6F4EF !important; /* Off-white para total visibilidade */
     text-align: center;
     font-style: italic; /* O itálico reforça o tom de acolhimento */
     margin: 20px 0;
