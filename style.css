@@ -30,19 +30,20 @@ body.dark-mode p {
     color: #f4f7f6;
 }
 
-/* Mas atenção: se você tiver parágrafos DENTRO do card, 
-   o seletor que você já fez (body.dark-mode .card) já cuida disso. */
-/* CABEÇALHO - O segredo está aqui */
+/* 1. CORREÇÃO DO CABEÇALHO (Removendo azul antigo) */
 header {
     display: flex;
-    justify-content: space-between; /* Empurra o nome para a esquerda e o menu para a direita */
-    align-items: center;            /* Centraliza verticalmente todos os itens */
+    justify-content: space-between;
+    align-items: center;
     padding: 0 5%;
     height: 80px;
-    background: rgba(255, 255, 255, 0.8); /* Branco com 80% de opacidade */
-    backdrop-filter: blur(10px);        /* Efeito de desfoque no fundo */
+    background: rgba(246, 244, 239, 0.9); /* Usando o Off-white com opacidade */
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(111, 142, 139, 0.1); /* Borda sutil em Sálvia */
+    position: fixed; /* Garante que o menu acompanhe a rolagem */
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul {
@@ -152,15 +153,20 @@ body.dark-mode .main-quote {
     color: #D9CFC1; /* A cor areia vira a cor do texto no escuro */
 }
 /* NOVO TOPO PROFISSIONAL */
+/* 2. AJUSTE DO HERO (Para alinhar com a cor da tabela) */
 .hero { 
-    background-color: #f8f9fa; 
-    /* REDUÇÃO DE ALTURA: Mudamos de 80vh para 50vh ou auto */
+    background-color: var(--bg-light); /* Cor #F6F4EF */
     min-height: 60vh;          
     display: flex; 
     align-items: center; 
-    /* AJUSTE DE RESPIRO: Menos espaço em cima e embaixo */
-    padding: 40px 5%;
+    padding: 80px 5% 40px; /* Padding ajustado para não ficar sob o header fixo */
     color: var(--text-color);
+}
+
+.hero-content h1 { 
+    font-size: 2.8rem; 
+    color: var(--secondary); /* Verde Profundo para autoridade */
+    font-family: 'Playfair Display', serif;
 }
 
 .hero-container {
@@ -176,13 +182,6 @@ body.dark-mode .main-quote {
 .hero-content {
     flex: 1;
     text-align: left; /* Texto à esquerda como você planejou */
-}
-
-.hero-content h1 { 
-    font-size: 2.5rem; 
-    margin-bottom: 20px; 
-    color: var(--primary); /* Usa o azul da sua marca */
-    line-height: 1.1;
 }
 
 .hero-content p {
@@ -205,19 +204,58 @@ body.dark-mode .main-quote {
     box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Sombra para profundidade */
 }
 
-.cta-button:hover {
-    background: #4a7384; /* Um tom um pouco mais escuro que o primary */
-    background-color: #128C7E; /* Tom de verde mais escuro ao passar o mouse */
-    transform: translateY(-2px); /* Leve subida para interatividade */
-}
+/* 1. PADRONIZAÇÃO DE BOTÕES (Substituindo o azul antigo) */
 .cta-button { 
-    background: #25d366; 
-    color: white; 
+    background-color: var(--primary); /* Verde Sálvia #6F8E8B */
+    color: var(--white) !important; 
     padding: 15px 30px; 
-    border-radius: 30px; 
+    border-radius: 12px; 
     text-decoration: none; 
-    font-weight: bold; 
+    font-weight: 600; 
     display: inline-block; 
+    transition: 0.3s;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary); /* Verde Profundo #4F6D6A */
+    transform: translateY(-2px);
+}
+
+/* 2. BOTÃO DO MENU (Igualando a identidade) */
+.btn-nav {
+    background: var(--primary) !important; /* Força o Verde Sálvia */
+    color: var(--white) !important;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    background: var(--secondary) !important;
+    box-shadow: 0 4px 12px rgba(111, 142, 139, 0.2);
+}
+
+/* 3. CORES DE FUNDO (Conforme a tabela) */
+.section-split { 
+    background-color: var(--white); /* #FFFFFF */
+}
+
+.alternate-bg { 
+    background-color: var(--bg-light) !important; /* #F6F4EF */
+}
+
+.accent-bg { 
+    background-color: var(--accent) !important; /* #D9CFC1 */
+}
+
+/* 4. AJUSTE DO QUOTE (Frase de Impacto) */
+.quote-section {
+    background-color: var(--accent); /* Areia */
+    padding: 80px 20px;
 }
 
     .container {
