@@ -710,6 +710,25 @@ body.dark-mode .main-quote {
     margin-bottom: 30px; 
 }
 
+/* Horários de Atendimento */
+.info-pratica {
+    background-color: #D9CFC1 !important; /* Fundo Areia para destaque */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.info-item h3 {
+    font-family: 'Playfair Display', serif !important; /* Fonte dos títulos */
+    color: #4F6D6A; /* Verde Profundo */
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.info-item p {
+    font-family: 'Lora', serif !important; /* Fonte do corpo */
+    color: #2F2F2F;
+    line-height: 1.6;
+}
 .footer {
     background-color: var(--secondary); /* Usa a cor de fundo suave que definimos */
     padding: 10px 0;
