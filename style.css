@@ -266,6 +266,16 @@ nav a:hover {
     display: block;
     margin: 0 auto;
 }
+.link-destaque {
+    color: var(--primary);    /* Usa o Verde Sálvia */
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.link-destaque:hover {
+    color: var(--secondary);  /* Escurece ao passar o mouse */
+}
 
 /* Ajuste para tablets e celulares (Responsividade) */
 @media (max-width: 768px) {
