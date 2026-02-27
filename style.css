@@ -208,7 +208,7 @@ nav a:hover {
         gap: 30px;
         margin-top: 40px;
     }
-
+    /* Estrutura "Zigue-Zague" por todo o site: */
     .section-split {
         padding: 100px 0;
         background-color: var(--white);
@@ -239,6 +239,33 @@ nav a:hover {
         border-radius: 12px; /* Arredondamento sofisticado */
         box-shadow: 0 15px 40px rgba(0,0,0,0.08);
     }
+/* Isso fará o texto e imagem ficarem LADO A LADO */
+.split-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 80px 0;
+}
+
+/* Isso garante que cada um ocupe metade da tela */
+.split-content, .split-image {
+    flex: 1;
+}
+
+/* Isso cria a inversão na segunda seção */
+.inverted {
+    flex-direction: row-reverse;
+}
+
+/* Ajuste das imagens para não ficarem gigantes */
+.split-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+}
 
 /* Ajuste para tablets e celulares (Responsividade) */
 @media (max-width: 768px) {
