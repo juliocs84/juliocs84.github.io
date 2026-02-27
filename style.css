@@ -323,23 +323,18 @@ body.dark-mode details {
     border-color: rgba(255,255,255,0.1);
 }
 /* SEÇÃO DA FRASE - Verde Profundo */
-section.quote-section {
-    background-color: #4F6D6A !important; /* Fundo Verde Profundo */
-    padding: 90px 20px !important; /* Espaço generoso para o respiro visual */
-    text-align: center !important;
-    border: none !important; /* Remove bordas desnecessárias */
-    display: block !important;
+.quote-section {
+    background-color: #4F6D6A !important; /* Verde Profundo */
+    padding: 90px 20px;
+    text-align: center;
 }
 
-.quote-section .main-quote {
-    font-family: 'Playfair Display', serif !important; /* Fonte elegante para citações */
-    font-size: 2rem !important;  /* Tamanho destacado */
-    font-style: italic !important;
-    color: #F6F4EF !important; /* Texto em Off-white para dar leitura */
-    max-width: 850px !important;
-    margin: 0 auto !important;
-    line-height: 1.5 !important;
-    font-weight: 500 !important;
+.main-quote {
+    color: #F6F4EF !important; /* Off-white para brilhar no verde */
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-style: italic;
+    border: none;
 }
 
 /* Ajuste para celular */
