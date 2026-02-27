@@ -149,38 +149,7 @@ body.dark-mode .btn-nav:hover {
     background-color: var(--primary); /* E clareia levemente no hover */
 }
 
-/* ... código anterior (Header, Hero, etc.) ... */
 
-/* SEÇÃO DA FRASE - FUNDO AREIA */
-.quote-section {
-    background-color: #4F6D6A !important; /* Verde Profundo da paleta */
-    padding: 90px 20px;                   /* Espaço generoso para o respiro visual */
-    text-align: center;
-    border: none;                         /* Remove bordas desnecessárias */
-}
-
-.main-quote {
-    font-family: 'Playfair Display', serif; /* Fonte elegante para citações */
-    font-size: 2rem;                      /* Tamanho destacado */
-    font-style: italic;
-    color: #4F6D6A;                       /* Verde Profundo para leitura perfeita */
-    max-width: 850px;
-    margin: 0 auto;
-    line-height: 1.5;
-    font-weight: 500;
-}
-
-/* Ajuste para celular */
-@media (max-width: 768px) {
-    .main-quote {
-        font-size: 1.5rem;
-        padding: 0 10px;
-    }
-}
-
-body.dark-mode .main-quote {
-    color: #D9CFC1; /* A cor areia vira a cor do texto no escuro */
-}
 /* NOVO TOPO PROFISSIONAL */
 /* 2. AJUSTE DO HERO (Para alinhar com a cor da tabela) */
 .hero { 
@@ -281,10 +250,30 @@ body.dark-mode .main-quote {
     background-color: var(--accent) !important; /* #D9CFC1 */
 }
 
-/* 4. AJUSTE DO QUOTE (Frase de Impacto) */
+/* SEÇÃO DA FRASE - IMPACTO VERDE PROFUNDO */
 .quote-section {
-    background-color: var(--accent); /* Areia */
-    padding: 80px 20px;
+    background-color: #4F6D6A !important; /* Fundo Verde Profundo para alto impacto */
+    padding: 100px 20px;                  /* Espaçamento para o respiro visual */
+    text-align: center;
+    border: none;
+}
+
+.main-quote {
+    font-family: 'Playfair Display', serif; /* Fonte sofisticada */
+    font-size: 2rem;
+    font-style: italic;
+    color: #F6F4EF;                       /* Texto em Off-white para contraste total no fundo escuro */
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Ajuste para garantir visibilidade no celular */
+@media (max-width: 768px) {
+    .main-quote {
+        font-size: 1.6rem;
+    }
 }
 
     .container {
