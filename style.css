@@ -852,21 +852,19 @@ footer, .footer {
 }
 
 /* CONSERTO DEFINITIVO DA FRASE DE IMPACTO */
-/* FORMATAÇÃO DA FRASE DE IMPACTO */
+/* FORÇA O FUNDO VERDE E A COR DO TEXTO */
 .quote-section {
-    background-color: #4F6D6A !important; /* Verde Profundo */
+    background-color: #4F6D6A !important; /* Verde Profundo oficial */
     padding: 100px 20px !important;
     text-align: center !important;
 }
 
 .main-quote {
+    color: #F6F4EF !important; /* Off-white para o texto brilhar no verde */
     font-family: 'Playfair Display', serif !important;
-    font-size: 2.2rem !important;
+    font-size: 2rem !important;
     font-style: italic !important;
-    color: #F6F4EF !important; /* Off-white */
-    max-width: 850px;
     margin: 0 auto !important;
-    line-height: 1.6;
     border: none !important;
 }
 
