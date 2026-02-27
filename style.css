@@ -208,7 +208,38 @@ nav a:hover {
         gap: 30px;
         margin-top: 40px;
     }
+
+    .section-split {
+        padding: 100px 0;
+        background-color: var(--white);
+    }
     
+    .alternate-bg {
+        background-color: var(--accent); /* Usa o tom Areia #D9CFC1 */
+    }
+    
+    .split-container {
+        display: flex;
+        align-items: center;
+        gap: 80px; /* Espaço generoso entre foto e texto */
+    }
+    
+    .split-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+        color: var(--secondary); /* Verde profundo #4F6D6A */
+    }
+    
+    .inverted {
+        flex-direction: row-reverse; /* Faz o efeito de inversão */
+    }
+    
+    .split-image img {
+        width: 100%;
+        border-radius: 12px; /* Arredondamento sofisticado */
+        box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    }
+
 /* Ajuste para tablets e celulares (Responsividade) */
 @media (max-width: 768px) {
     #especialidades, 
