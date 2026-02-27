@@ -333,6 +333,22 @@ body.dark-mode .main-quote {
     }
     
     /* 3. TÍTULOS E TEXTOS */
+    /* SEÇÃO SOBRE MIM - FUNDO BRANCO PURO */
+    #sobre.section-split {
+        background-color: #FFFFFF !important; /* Cor conforme a tabela */
+        padding: 100px 0;
+    }
+    
+    #sobre .split-content h2 {
+        color: #4F6D6A; /* Verde Profundo para contraste no branco */
+        margin-bottom: 30px;
+    }
+    
+    #sobre .split-content p {
+        color: #2F2F2F; /* Grafite para legibilidade */
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+    }
     .split-content h2 {
         font-family: 'Playfair Display', serif;
         font-size: 2.5rem;
@@ -358,6 +374,24 @@ body.dark-mode .main-quote {
     .lista-beneficios i {
         color: var(--primary); /* Verde Sálvia nos ícones */
         font-size: 0.9rem;
+    }
+
+    /* APLICANDO A MESMA FONTE EM AMBAS AS SEÇÕES */
+    #sobre .split-content h2, 
+    #publico .split-content h2 {
+        font-family: 'Playfair Display', serif !important; /* Fonte elegante para títulos */
+        font-size: 2.5rem;
+        color: var(--secondary); /* Verde profundo #4F6D6A */
+        margin-bottom: 25px;
+    }
+    
+    #sobre .split-content p, 
+    #publico .split-content p,
+    .lista-beneficios li {
+        font-family: 'Lora', serif !important; /* Fonte sofisticada para leitura */
+        font-size: 1.1rem;
+        color: var(--text-color); /* Grafite #2F2F2F */
+        line-height: 1.8;
     }
     
     /* Garante que o fundo 'alternate-bg' use a cor Areia correta */
