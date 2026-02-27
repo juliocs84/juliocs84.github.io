@@ -864,7 +864,7 @@ footer, .footer {
 .main-quote {
     color: #F6F4EF !important; /* Texto em Off-white para dar leitura */
     font-family: 'Playfair Display', serif !important; /* Fonte elegante para citações */
-    font-size: 2rem !important;  /* Tamanho destacado */
+    font-size: 3rem !important;  /* Tamanho destacado */
     font-style: italic !important;
     margin: 0 auto !important;
     border: none !important;  /* Remove bordas desnecessárias */
