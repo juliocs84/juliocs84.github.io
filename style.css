@@ -322,28 +322,6 @@ details[open] {
 body.dark-mode details {
     border-color: rgba(255,255,255,0.1);
 }
-/* SEÇÃO DA FRASE - Verde Profundo */
-.quote-section {
-    background-color: #4F6D6A !important; /* Verde Profundo */
-    padding: 90px 20px;
-    text-align: center;
-}
-
-.main-quote {
-    color: #F6F4EF !important; /* Off-white para brilhar no verde */
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-style: italic;
-    border: none;
-}
-
-/* Ajuste para celular */
-@media (max-width: 768px) {
-    .main-quote {
-        font-size: 1.5rem;
-        padding: 0 10px;
-    }
-}
 
 body.dark-mode .main-quote {
     color: #D9CFC1; /* A cor areia vira a cor do texto no escuro */
@@ -763,7 +741,30 @@ body.dark-mode .main-quote {
     }
 }
 
-/* Dispositivos Móveis */
+/* SEÇÃO DA FRASE - Verde Profundo */
+.quote-section {
+    background-color: #4F6D6A !important; /* Verde Profundo */
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.main-quote {
+    color: #F6F4EF !important; /* Off-white para brilhar no verde */
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-style: italic;
+    border: none;
+}
+
+/* Ajuste para celular */
+@media (max-width: 768px) {
+    .main-quote {
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+}
+
+/* Dispositivos Móveis - Footer */
 .footer {
     background-color: var(--secondary); /* Usa a cor de fundo suave que definimos */
     padding: 10px 0;
