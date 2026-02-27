@@ -89,17 +89,25 @@ nav a:hover {
     color: var(--primary);
 }
 
-.btn-nav:hover {
-    background: #4a7384; /* Um tom um pouco mais escuro que o primary */
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* BOTÃO DE AGENDAMENTO NO MENU */
+.btn-nav {
+    background-color: var(--primary); /* Usa o Verde Sálvia #6F8E8B */
+    color: var(--white) !important;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
 }
 
-.btn-nav {
-    background: linear-gradient(135deg, #5a8ca0, #4a7485);
-    border: none;
-    padding: 12px 25px;
-    border-radius: 50px; /* Bordas arredondadas são mais amigáveis */
+.btn-nav:hover {
+    background-color: var(--secondary); /* Escurece para Verde Profundo ao passar o mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(111, 142, 139, 0.3); /* Sombra suave na cor do botão */
 }
 
 /* ... código anterior (Header, Hero, etc.) ... */
