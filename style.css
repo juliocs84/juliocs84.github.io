@@ -630,6 +630,17 @@ body.dark-mode .main-quote {
         padding-top: 30px; /* Diminui a distância entre o título e a seção anterior */
     }
 
+/* PADRONIZAÇÃO DA FRASE DE APOIO */
+.frase-apoio {
+    font-family: 'Playfair Display', serif !important; /* Mesma fonte dos títulos principais */
+    font-size: 1.8rem;
+    color: var(--secondary); /* Verde Profundo #4F6D6A para autoridade */
+    text-align: center;
+    font-style: italic; /* O itálico reforça o tom de acolhimento */
+    margin: 20px 0;
+    line-height: 1.4;
+}
+
   /* AJUSTE DE FONTES: DÚVIDAS FREQUENTES (FAQ) */
 #faq {
     padding-bottom: 20px;
