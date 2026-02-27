@@ -251,18 +251,19 @@ body.dark-mode .btn-nav:hover {
 }
 
 /* SEÇÃO DA FRASE - IMPACTO VERDE PROFUNDO */
+/* SEÇÃO DA FRASE - AJUSTE DE VISIBILIDADE */
 .quote-section {
-    background-color: #4F6D6A !important; /* Fundo Verde Profundo para alto impacto */
-    padding: 100px 20px;                  /* Espaçamento para o respiro visual */
+    background-color: #4F6D6A !important; /* Verde Profundo */
+    padding: 100px 20px;
     text-align: center;
     border: none;
 }
 
 .main-quote {
-    font-family: 'Playfair Display', serif; /* Fonte sofisticada */
+    font-family: 'Playfair Display', serif;
     font-size: 2rem;
     font-style: italic;
-    color: #F6F4EF;                       /* Texto em Off-white para contraste total no fundo escuro */
+    color: #F6F4EF !important; /* Off-white para total legibilidade */
     max-width: 850px;
     margin: 0 auto;
     line-height: 1.6;
