@@ -27,9 +27,18 @@ body {
 
 h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-.section-split { background-color: var(--white); }
-.alternate-bg { background-color: var(--bg-light) !important; }
-.accent-bg { background-color: var(--accent) !important; }
+/* CONFIGURAÇÃO DE CONTRASTE ENTRE SEÇÕES */
+.section-split {
+    background-color: #FFFFFF !important; /* Branco Puro */
+}
+
+.accent-bg {
+    background-color: #D9CFC1 !important; /* Areia (Destaque) */
+}
+
+.alternate-bg {
+    background-color: #F6F4EF !important; /* Off-white */
+}
 
 header { background: var(--header-bg); }
 .bg-light { background-color: var(--secondary); }
