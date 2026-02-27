@@ -701,7 +701,7 @@ body.dark-mode .main-quote {
     }
 
 .split-content p {
-    margin-bottom: 25px; /* Cria um espaço de 25px entre um parágrafo e outro */
+    margin-bottom: 20px; /* Cria um espaço de 25px entre um parágrafo e outro */
     line-height: 1.8;    /* Melhora a leitura ao dar mais respiro entre as linhas */
 }
 
