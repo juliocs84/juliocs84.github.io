@@ -256,7 +256,77 @@ body.dark-mode .btn-nav:hover {
     padding: 80px 20px;
 }
 /* ... código anterior (Header, Hero, etc.) ... */
+/* PADRONIZAÇÃO DA FRASE DE APOIO */
+.frase-apoio {
+    font-family: 'Playfair Display', serif !important; /* Mesma fonte dos títulos principais */
+    font-size: 1.8rem;
+    color: #F6F4EF !important; /* Off-white para total visibilidade */
+    text-align: center;
+    font-style: italic; /* O itálico reforça o tom de acolhimento */
+    margin: 20px 0;
+    line-height: 1.4;
+}
 
+  /* AJUSTE DE FONTES: DÚVIDAS FREQUENTES (FAQ) */
+#faq {
+    padding-bottom: 20px;
+    padding-top: 50px; /* Adicionado para respiro superior */
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+
+#faq .section-title {
+    font-family: 'Playfair Display', serif !important; /* Fonte dos títulos principais */
+    font-size: 2.5rem;
+    color: var(--secondary); /* Verde Profundo #4F6D6A */
+    margin-top: 0;
+    margin-bottom: 35px; /* Aumentado levemente para elegância */
+    text-align: center;
+}
+
+details {
+    background: var(--card-bg);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+summary {
+    font-family: 'Lora', serif !important; /* Fonte elegante para a pergunta */
+    font-size: 1.15rem;
+    padding: 20px;
+    font-weight: 500; /* Peso médio para não brigar com o título */
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary); /* Verde Sálvia #6F8E8B */
+}
+
+details p {
+    font-family: 'Lora', serif !important; /* Fonte para a resposta */
+    padding: 0 20px 20px;
+    line-height: 1.8; /* Espaçamento maior para leitura confortável */
+    color: var(--text-color); /* Grafite #2F2F2F */
+    font-size: 1.05rem;
+}
+
+/* Efeito de destaque ao abrir */
+details[open] {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Ajuste para o Dark Mode */
+body.dark-mode details {
+    border-color: rgba(255,255,255,0.1);
+}
 /* SEÇÃO DA FRASE - FUNDO AREIA */
 .quote-section {
     background-color: #4F6D6A !important; /* Verde Profundo da paleta */
@@ -630,76 +700,14 @@ body.dark-mode .main-quote {
         padding-top: 30px; /* Diminui a distância entre o título e a seção anterior */
     }
 
-/* PADRONIZAÇÃO DA FRASE DE APOIO */
-.frase-apoio {
-    font-family: 'Playfair Display', serif !important; /* Mesma fonte dos títulos principais */
-    font-size: 1.8rem;
-    color: #F6F4EF !important; /* Off-white para total visibilidade */
-    text-align: center;
-    font-style: italic; /* O itálico reforça o tom de acolhimento */
-    margin: 20px 0;
-    line-height: 1.4;
+.split-content p {
+    margin-bottom: 25px; /* Cria um espaço de 25px entre um parágrafo e outro */
+    line-height: 1.8;    /* Melhora a leitura ao dar mais respiro entre as linhas */
 }
 
-  /* AJUSTE DE FONTES: DÚVIDAS FREQUENTES (FAQ) */
-#faq {
-    padding-bottom: 20px;
-    padding-top: 50px; /* Adicionado para respiro superior */
-}
-
-.faq-grid {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 0;
-    margin-bottom: 0;
-}
-
-#faq .section-title {
-    font-family: 'Playfair Display', serif !important; /* Fonte dos títulos principais */
-    font-size: 2.5rem;
-    color: var(--secondary); /* Verde Profundo #4F6D6A */
-    margin-top: 0;
-    margin-bottom: 35px; /* Aumentado levemente para elegância */
-    text-align: center;
-}
-
-details {
-    background: var(--card-bg);
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-}
-
-summary {
-    font-family: 'Lora', serif !important; /* Fonte elegante para a pergunta */
-    font-size: 1.15rem;
-    padding: 20px;
-    font-weight: 500; /* Peso médio para não brigar com o título */
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--primary); /* Verde Sálvia #6F8E8B */
-}
-
-details p {
-    font-family: 'Lora', serif !important; /* Fonte para a resposta */
-    padding: 0 20px 20px;
-    line-height: 1.8; /* Espaçamento maior para leitura confortável */
-    color: var(--text-color); /* Grafite #2F2F2F */
-    font-size: 1.05rem;
-}
-
-/* Efeito de destaque ao abrir */
-details[open] {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-/* Ajuste para o Dark Mode */
-body.dark-mode details {
-    border-color: rgba(255,255,255,0.1);
+/* Remove a margem do último parágrafo para não empurrar o link/botão para baixo demais */
+.split-content p:last-of-type {
+    margin-bottom: 30px; 
 }
 
 .footer {
