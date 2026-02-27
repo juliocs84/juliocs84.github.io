@@ -855,17 +855,22 @@ footer, .footer {
 /* FORÇA O FUNDO VERDE E A COR DO TEXTO */
 .quote-section {
     background-color: #4F6D6A !important; /* Verde Profundo oficial */
-    padding: 100px 20px !important;
+    padding: 90px 20px !important;
     text-align: center !important;
+    border: none !important; /* Remove bordas desnecessárias */
+    display: block !important;
 }
 
 .main-quote {
-    color: #F6F4EF !important; /* Off-white para o texto brilhar no verde */
-    font-family: 'Playfair Display', serif !important;
-    font-size: 2rem !important;
+    color: #F6F4EF !important; /* Texto em Off-white para dar leitura */
+    font-family: 'Playfair Display', serif !important; /* Fonte elegante para citações */
+    font-size: 2rem !important;  /* Tamanho destacado */
     font-style: italic !important;
     margin: 0 auto !important;
-    border: none !important;
+    border: none !important;  /* Remove bordas desnecessárias */
+    max-width: 850px !important;
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
 }
 
 /* Garante que o texto não suma no celular */
@@ -873,4 +878,8 @@ footer, .footer {
     section.quote-section .main-quote {
         font-size: 1.6rem !important;
     }
+}
+/* AJUSTE PARA A FRASE NO DARK MODE */
+body.dark-mode .quote-section {
+    background-color: #3d5654 !important; /* Um tom de verde ainda mais fechado */
 }
