@@ -1,16 +1,31 @@
 html {
     scroll-behavior: smooth;
 }
-/* Cores padrão (Light Mode) */
-/* 1. CORES E FONTES UNIFICADAS */
+/* 1. IMPORTAÇÃO DE FONTES E VARIÁVEIS UNIFICADAS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;500&family=Montserrat:wght@600&family=Inter:wght@400;600&display=swap');
+
 :root {
     --primary: #6F8E8B;        /* Verde sálvia */
     --secondary: #4F6D6A;      /* Verde profundo */
     --bg-light: #F6F4EF;       /* Off-white quente */
     --accent: #D9CFC1;         /* Areia */
     --text-color: #2F2F2F;     /* Grafite */
-    --white: #FFFFFF;      /* Branco Puro */
+    --white: #FFFFFF;
+    --header-bg: rgba(246, 244, 239, 0.9);
 }
+
+/* 2. CONFIGURAÇÕES GERAIS */
+html { scroll-behavior: smooth; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Lora', serif; 
+    color: var(--text-color); 
+    line-height: 1.6; 
+    background-color: var(--white);
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
 .section-split { background-color: var(--white); }
 .alternate-bg { background-color: var(--bg-light) !important; }
@@ -31,44 +46,47 @@ body.dark-mode p {
 }
 
 /* 1. CORREÇÃO DO CABEÇALHO (Removendo azul antigo) */
+/* 3. CABEÇALHO (FIXO E TRANSPARENTE) */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
     height: 80px;
-    background: rgba(246, 244, 239, 0.9); /* Usando o Off-white com opacidade */
+    background: var(--header-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(111, 142, 139, 0.1); /* Borda sutil em Sálvia */
-    position: fixed; /* Garante que o menu acompanhe a rolagem */
+    border-bottom: 1px solid rgba(111, 142, 139, 0.1);
+    position: fixed;
     width: 100%;
     z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: -0.03em;
 }
 
 nav ul {
     display: flex;
     align-items: center;
-    gap: 30px; /* Cria um buraco de 30px entre cada item do menu */
+    gap: 30px;
     list-style: none;
 }
 
-.logo {
-    /* Mantendo suas configurações de estrutura */
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    white-space: nowrap;
-    margin-left: -10px; /* Ajuste fino para "puxar" levemente para a esquerda */
-
-    /* Ajustes específicos da FONTE para igualar as imagens */
-    font-family: 'Inter', sans-serif; /* Fonte moderna e limpa */
-    font-size: 1.4rem;               /* Aumentado levemente para dar presença */
-    font-weight: 600;                /* Peso Bold (negrito) como nos prints */
-    color: var(--primary);           /* Cor azul acinzentada definida no seu :root */
-    letter-spacing: -0.03em;         /* Aproxima as letras, criando um visual mais premium */
-    line-height: 1;                  /* Remove respiros verticais desnecessários */
+nav a { 
+    text-decoration: none; 
+    color: var(--text-color); 
+    transition: 0.3s;
 }
+
+nav a:hover { color: var(--primary); }
 
 .logo-icon {
     width: 40px;
