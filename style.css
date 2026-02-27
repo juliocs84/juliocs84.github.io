@@ -109,6 +109,14 @@ nav a:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(111, 142, 139, 0.3); /* Sombra suave na cor do botão */
 }
+/* Dark Mode */
+body.dark-mode .btn-nav {
+    background-color: var(--secondary); /* No escuro, ele começa já no tom mais profundo */
+}
+
+body.dark-mode .btn-nav:hover {
+    background-color: var(--primary); /* E clareia levemente no hover */
+}
 
 /* ... código anterior (Header, Hero, etc.) ... */
 
@@ -258,6 +266,31 @@ nav a:hover {
         font-size: 2.5rem;
         color: var(--secondary);
         margin-bottom: 20px;
+    }
+    /*  Atualização do HTML (Para quem é a terapia?) */
+    .lista-beneficios {
+        list-style: none;
+        padding: 0;
+        margin-top: 25px;
+    }
+    
+    .lista-beneficios li {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        color: var(--text-color);
+    }
+    
+    .lista-beneficios i {
+        color: var(--primary); /* Verde Sálvia nos ícones */
+        font-size: 0.9rem;
+    }
+    
+    /* Garante que o fundo 'alternate-bg' use a cor Areia correta */
+    .alternate-bg {
+        background-color: var(--bg-light) !important; /* Ou use var(--accent) se quiser o tom Areia */
     }
 
 /* 4. RESPONSIVIDADE (FIX PARA CELULAR) */
