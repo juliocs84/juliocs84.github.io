@@ -711,24 +711,48 @@ body.dark-mode .main-quote {
 }
 
 /* Horários de Atendimento */
-.info-pratica {
-    background-color: #D9CFC1 !important; /* Fundo Areia para destaque */
-    padding: 60px 0;
-    text-align: center;
+/* CONTAINER PRINCIPAL DO GRID */
+.info-grid {
+    display: flex;                /* Ativa o alinhamento lado a lado */
+    justify-content: space-around; /* Distribui os itens com espaço entre eles */
+    align-items: flex-start;
+    gap: 40px;                    /* Espaço entre Horários e Atendimento */
+    max-width: 1000px;
+    margin: 0 auto;               /* Centraliza o grid na página */
 }
 
+/* AJUSTE DOS ITENS INDIVIDUAIS */
+.info-item {
+    flex: 1;                      /* Faz ambos ocuparem o mesmo espaço */
+    text-align: center;           /* Centraliza ícones, títulos e textos */
+}
+
+/* ESTILO DOS TÍTULOS E ÍCONES */
 .info-item h3 {
-    font-family: 'Playfair Display', serif !important; /* Fonte dos títulos */
-    color: #4F6D6A; /* Verde Profundo */
+    font-family: 'Playfair Display', serif !important;
+    color: #4F6D6A;               /* Verde Profundo para autoridade */
     font-size: 1.6rem;
-    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;                    /* Espaço entre o ícone e a palavra */
 }
 
+/* ESTILO DO TEXTO */
 .info-item p {
-    font-family: 'Lora', serif !important; /* Fonte do corpo */
+    font-family: 'Lora', serif !important;
     color: #2F2F2F;
-    line-height: 1.6;
+    margin-bottom: 5px;           /* Diminui o espaço entre as linhas de texto */
 }
+
+@media (max-width: 768px) {
+    .info-grid {
+        flex-direction: column;   /* No celular, eles voltam a ficar um sobre o outro */
+        gap: 60px;
+    }
+}
+
+/* Dispositivos Móveis */
 .footer {
     background-color: var(--secondary); /* Usa a cor de fundo suave que definimos */
     padding: 10px 0;
