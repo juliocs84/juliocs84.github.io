@@ -251,30 +251,41 @@ body.dark-mode .btn-nav:hover {
 }
 
 /* SEÇÃO DA FRASE - IMPACTO VERDE PROFUNDO */
-/* SEÇÃO DA FRASE - AJUSTE DE VISIBILIDADE */
 .quote-section {
-    background-color: #4F6D6A !important; /* Verde Profundo */
-    padding: 100px 20px;
+    background-color: var(--accent); /* Areia */
+    padding: 80px 20px;
+}
+/* ... código anterior (Header, Hero, etc.) ... */
+
+/* SEÇÃO DA FRASE - FUNDO AREIA */
+.quote-section {
+    background-color: #4F6D6A !important; /* Verde Profundo da paleta */
+    padding: 90px 20px;                   /* Espaço generoso para o respiro visual */
     text-align: center;
-    border: none;
+    border: none;                         /* Remove bordas desnecessárias */
 }
 
 .main-quote {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-family: 'Playfair Display', serif; /* Fonte elegante para citações */
+    font-size: 2rem;                      /* Tamanho destacado */
     font-style: italic;
-    color: #F6F4EF !important; /* Off-white para total legibilidade */
+    color: #4F6D6A;                       /* Verde Profundo para leitura perfeita */
     max-width: 850px;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 1.5;
     font-weight: 500;
 }
 
-/* Ajuste para garantir visibilidade no celular */
+/* Ajuste para celular */
 @media (max-width: 768px) {
     .main-quote {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        padding: 0 10px;
     }
+}
+
+body.dark-mode .main-quote {
+    color: #D9CFC1; /* A cor areia vira a cor do texto no escuro */
 }
 
     .container {
