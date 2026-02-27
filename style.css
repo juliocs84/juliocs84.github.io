@@ -120,23 +120,33 @@ body.dark-mode .btn-nav:hover {
 
 /* ... código anterior (Header, Hero, etc.) ... */
 
-/* SEÇÃO DE FRASE DE IMPACTO (QUOTE) */
 .quote-section {
-    background-color: var(--secondary); /* Cor leve para dar destaque */
-    padding: 60px 20px;
+    background-color: var(--accent); /* Tom Areia #D9CFC1 */
+    padding: 80px 20px;
     text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.03); /* Linha quase invisível para acabamento */
+    border-bottom: 1px solid rgba(0,0,0,0.03);
 }
 
 .main-quote {
-    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif; /* Fonte sofisticada dos títulos */
+    font-size: 1.8rem;
     font-style: italic;
-    color: var(--primary); /* Azul da marca */
-    max-width: 700px;
+    color: var(--secondary); /* Verde profundo para leitura perfeita */
+    max-width: 800px;
     margin: 0 auto;
-    font-weight: 300;
-    line-height: 1.6;
+    font-weight: 500;
+    line-height: 1.5;
+}
+/* Dark Mode */
+body.dark-mode .quote-section {
+    background-color: #252828 !important; /* Um cinza-esverdeado escuro */
+    border-color: rgba(255,255,255,0.05);
 }
 
+body.dark-mode .main-quote {
+    color: #D9CFC1; /* A cor areia vira a cor do texto no escuro */
+}
 /* NOVO TOPO PROFISSIONAL */
 .hero { 
     background-color: #f8f9fa; 
