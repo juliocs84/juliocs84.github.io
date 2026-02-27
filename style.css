@@ -741,29 +741,6 @@ body.dark-mode .main-quote {
     }
 }
 
-/* SEÇÃO DA FRASE - Verde Profundo */
-.quote-section {
-    background-color: #4F6D6A !important; /* Verde Profundo */
-    padding: 90px 20px;
-    text-align: center;
-}
-
-.main-quote {
-    color: #F6F4EF !important; /* Off-white para brilhar no verde */
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-style: italic;
-    border: none;
-}
-
-/* Ajuste para celular */
-@media (max-width: 768px) {
-    .main-quote {
-        font-size: 1.5rem;
-        padding: 0 10px;
-    }
-}
-
 /* Dispositivos Móveis - Footer */
 .footer {
     background-color: var(--secondary); /* Usa a cor de fundo suave que definimos */
@@ -872,4 +849,33 @@ footer, .footer {
 .container.footer-content {
     padding: 0 !important;
     margin: 0 auto !important;
+}
+
+/* CONSERTO DEFINITIVO DA FRASE DE IMPACTO */
+section.quote-section {
+    background-color: #4F6D6A !important; /* Verde Profundo oficial */
+    padding: 90px 20px !important;  /* Espaço generoso para o respiro visual */
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    border: none !important; /* Remove bordas desnecessárias */
+}
+
+section.quote-section .main-quote {
+    font-family: 'Playfair Display', serif !important; /* Fonte elegante para citações */
+    color: #F6F4EF !important; /* Texto em Off-white para dar leitura */
+    font-size: 2.2rem !important; /* Tamanho destacado */
+    font-style: italic !important;
+    max-width: 850px !important;
+    margin: 0 auto !important;
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
+    border: none !important;
+}
+
+/* Garante que o texto não suma no celular */
+@media (max-width: 768px) {
+    section.quote-section .main-quote {
+        font-size: 1.6rem !important;
+    }
 }
