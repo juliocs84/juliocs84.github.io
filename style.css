@@ -250,11 +250,6 @@ body.dark-mode .btn-nav:hover {
     background-color: var(--accent) !important; /* #D9CFC1 */
 }
 
-/* SEÇÃO DA FRASE - IMPACTO VERDE PROFUNDO */
-.quote-section {
-    background-color: var(--accent); /* Areia */
-    padding: 80px 20px;
-}
 /* ... código anterior (Header, Hero, etc.) ... */
 /* PADRONIZAÇÃO DA FRASE DE APOIO */
 .frase-apoio {
@@ -327,23 +322,24 @@ details[open] {
 body.dark-mode details {
     border-color: rgba(255,255,255,0.1);
 }
-/* SEÇÃO DA FRASE - FUNDO AREIA */
-.quote-section {
-    background-color: #4F6D6A !important; /* Verde Profundo da paleta */
-    padding: 90px 20px;                   /* Espaço generoso para o respiro visual */
-    text-align: center;
-    border: none;                         /* Remove bordas desnecessárias */
+/* SEÇÃO DA FRASE - Verde Profundo */
+section.quote-section {
+    background-color: #4F6D6A !important; /* Fundo Verde Profundo */
+    padding: 90px 20px !important; /* Espaço generoso para o respiro visual */
+    text-align: center !important;
+    border: none !important; /* Remove bordas desnecessárias */
+    display: block !important;
 }
 
-.main-quote {
-    font-family: 'Playfair Display', serif; /* Fonte elegante para citações */
-    font-size: 2rem;                      /* Tamanho destacado */
-    font-style: italic;
-    color: #4F6D6A;                       /* Verde Profundo para leitura perfeita */
-    max-width: 850px;
-    margin: 0 auto;
-    line-height: 1.5;
-    font-weight: 500;
+.quote-section .main-quote {
+    font-family: 'Playfair Display', serif !important; /* Fonte elegante para citações */
+    font-size: 2rem !important;  /* Tamanho destacado */
+    font-style: italic !important;
+    color: #F6F4EF !important; /* Texto em Off-white para dar leitura */
+    max-width: 850px !important;
+    margin: 0 auto !important;
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
 }
 
 /* Ajuste para celular */
