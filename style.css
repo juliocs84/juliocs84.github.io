@@ -142,28 +142,31 @@ body.dark-mode .btn-nav:hover {
 
 /* ... código anterior (Header, Hero, etc.) ... */
 
+/* SEÇÃO DA FRASE - FUNDO AREIA */
 .quote-section {
-    background-color: var(--accent); /* Tom Areia #D9CFC1 */
-    padding: 80px 20px;
+    background-color: #D9CFC1 !important; /* Cor Areia conforme a tabela */
+    padding: 90px 20px;                   /* Espaço generoso para o respiro visual */
     text-align: center;
-    border-top: 1px solid rgba(0,0,0,0.03); /* Linha quase invisível para acabamento */
-    border-bottom: 1px solid rgba(0,0,0,0.03);
+    border: none;                         /* Remove bordas desnecessárias */
 }
 
 .main-quote {
-    font-family: 'Playfair Display', serif; /* Fonte sofisticada dos títulos */
-    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif; /* Fonte elegante para citações */
+    font-size: 2rem;                      /* Tamanho destacado */
     font-style: italic;
-    color: var(--secondary); /* Verde profundo para leitura perfeita */
-    max-width: 800px;
+    color: #4F6D6A;                       /* Verde Profundo para leitura perfeita */
+    max-width: 850px;
     margin: 0 auto;
-    font-weight: 500;
     line-height: 1.5;
+    font-weight: 500;
 }
-/* Dark Mode */
-body.dark-mode .quote-section {
-    background-color: #252828 !important; /* Um cinza-esverdeado escuro */
-    border-color: rgba(255,255,255,0.05);
+
+/* Ajuste para celular */
+@media (max-width: 768px) {
+    .main-quote {
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
 }
 
 body.dark-mode .main-quote {
