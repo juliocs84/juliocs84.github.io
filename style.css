@@ -9,8 +9,12 @@ html {
     --bg-light: #F6F4EF;       /* Off-white quente */
     --accent: #D9CFC1;         /* Areia */
     --text-color: #2F2F2F;     /* Grafite */
-    --white: #FFFFFF;
+    --white: #FFFFFF;      /* Branco Puro */
 }
+
+.section-split { background-color: var(--white); }
+.alternate-bg { background-color: var(--bg-light) !important; }
+.accent-bg { background-color: var(--accent) !important; }
 
 header { background: var(--header-bg); }
 .bg-light { background-color: var(--secondary); }
