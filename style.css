@@ -646,6 +646,10 @@ body.dark-mode .main-quote {
         color: var(--primary);
         gap: 10px;
     }
+  /* Ajusta o topo da seção de Especialidades */
+    #abordagem {
+        padding-top: 30px; /* Diminui a distância entre o título e a seção anterior */
+    }
 
  /* Cronograma e Selo de Atendimento */
 
