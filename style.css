@@ -610,27 +610,27 @@ body.dark-mode .main-quote {
 /* ============================================================
    SEÇÃO: MINHA ABORDAGEM (ALINHAMENTO À ESQUERDA)
    ============================================================ */
+#abordagem .abordagem-content {
+    align-items: flex-start !important; /* Mudei de center para flex-start */
+    text-align: left !important;
+}
+
 #abordagem .abordagem-text {
-    text-align: left !important; 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Garante que tudo dentro do bloco comece à esquerda */
+    align-items: flex-start !important; /* Garante que o conteúdo interno alinhe à esquerda */
+    text-align: left !important;
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 #abordagem .abordagem-text h2 {
-    text-align: left !important;
+    text-align: left !important; /* Título à esquerda igual ao Sobre Mim */
     margin-bottom: 25px;
     width: 100%;
 }
 
 #abordagem .abordagem-text p {
-    text-align: left !important;
+    text-align: left !important; /* Parágrafo à esquerda */
     margin-bottom: 20px;
-    line-height: 1.8;
-    width: 100%;
+    max-width: 100%; /* Permite que o texto ocupe o espaço necessário à esquerda */
 }
 
 /* ============================================================
