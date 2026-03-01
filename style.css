@@ -616,7 +616,7 @@ body.dark-mode .main-quote {
 .abordagem-content {
     display: flex;
     flex-direction: column; 
-    align-items: center;    
+    text-align: left; /* Texto à esquerda como você planejou */   
     gap: 30px;
     max-width: 800px;
     margin: 0 auto;         
@@ -631,7 +631,7 @@ body.dark-mode .main-quote {
 
 /* Título continua centralizado para manter o equilíbrio visual */
 #abordagem .abordagem-text h2 {
-    text-align: center !important;
+    text-align: left; /* Texto à esquerda como você planejou */
     margin-bottom: 25px;
     font-family: 'Playfair Display', serif !important;
     color: var(--secondary);
