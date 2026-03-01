@@ -611,7 +611,8 @@ body.dark-mode .main-quote {
         padding: 50px 20px; /* Reduzi o padding lateral para mobile */
         border-radius: 20px;
         margin-top: 40px;
-        text-align: center; /* Centraliza todo o texto interno */
+        text-align: justify; /* Centraliza todo o texto interno */
+        hyphens: auto; /* Evita espços grandes o texto interno */
     }
     
     .abordagem-content {
