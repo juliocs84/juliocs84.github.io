@@ -610,41 +610,35 @@ body.dark-mode .main-quote {
 /* ============================================================
    SEÇÃO: MINHA ABORDAGEM (ALINHAMENTO À ESQUERDA)
    ============================================================ */
-#abordagem .abordagem-content {
-    align-items: flex-start !important; /* Mudei de center para flex-start */
-    text-align: left !important;
+/* ESPELHANDO A REGRA DO SOBRE MIM PARA A ABORDAGEM */
+#abordagem.section-split {
+    padding: 100px 0;
 }
 
-#abordagem .abordagem-text {
-    align-items: flex-start !important; /* Garante que o conteúdo interno alinhe à esquerda */
+#abordagem .split-content {
     text-align: left !important;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o título e os textos à esquerda */
 }
 
-#abordagem .abordagem-text h2 {
-    text-align: left !important; /* Título à esquerda igual ao Sobre Mim */
+#abordagem .split-content h2 {
+    text-align: left !important;
     margin-bottom: 25px;
     width: 100%;
 }
 
-#abordagem .abordagem-text p {
-    text-align: left !important; /* Parágrafo à esquerda */
+#abordagem .split-content p {
+    text-align: left !important;
     margin-bottom: 20px;
-    max-width: 100%; /* Permite que o texto ocupe o espaço necessário à esquerda */
+    line-height: 1.8;
 }
 
-/* ============================================================
-   RESPONSIVIDADE: AJUSTE PARA CELULAR
-   ============================================================ */
-
+/* Ajuste para celular */
 @media (max-width: 768px) {
-    #abordagem .abordagem-text p {
-        text-align: left !important;  /* Mantém à esquerda inclusive no celular */
+    #abordagem .split-content {
         padding: 0 20px;
-    }
-
-    .bg-light-box {
-        padding: 40px 15px;
+        align-items: flex-start !important;
     }
 }
  /* Cronograma e Selo de Atendimento */
