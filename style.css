@@ -606,60 +606,44 @@ body.dark-mode .main-quote {
     }
 
 /* Abordagem Terapêutica (Autoridade) */
-    .bg-light-box {
-        background: var(--card-bg);
-        padding: 50px 20px; /* Reduzi o padding lateral para mobile */
-        border-radius: 20px;
-        margin-top: 40px;
-    }
-    
-    .abordagem-content {
-        display: flex;
-        flex-direction: column; /* Empilha os itens verticalmente */
-        align-items: center;    /* Centraliza os itens no eixo horizontal */
-        gap: 30px;
-        max-width: 800px;
-        margin: 0 auto;         /* Centraliza o container na página */
-    }
-    
-    .abordagem-text {
-    flex: none; 
-    width: 100%;
-    text-align: center; /* Adicione esta linha para centralizar o título e o parágrafo */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Garante que elementos internos fiquem no meio */
+.bg-light-box {
+    background: var(--card-bg);
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin-top: 40px;
 }
 
-    /* Caso o parágrafo tenha uma largura máxima para leitura, centralizamos ele também */
-    .abordagem-text p {
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .abordagem-badge {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: var(--primary);
-        gap: 10px;
-    }
-  /* Ajusta o topo da seção de Especialidades */
-    #abordagem {
-        padding-top: 30px; /* Diminui a distância entre o título e a seção anterior */
-    }
-/* Justificar apenas o texto da seção Minha Abordagem */
-    #abordagem .split-content p {
-        text-align: justify;
-        text-justify: inter-word; /* Melhora o espaçamento entre as palavras */
-        hyphens: auto;            /* Adiciona hifens se necessário para evitar buracos no texto */
-    }
+.abordagem-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;         
+}
 
-@media (max-width: 768px) {
-    #abordagem .split-content p {
-        text-align: center; /* No celular, o texto centralizado costuma acolher melhor */
-    }
+.abordagem-text {
+    flex: none; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* O ERRO ESTAVA AQUI: Usando a classe correta e forçando a justificativa */
+.abordagem-text p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify !important; /* Força a justificativa sobre o center anterior */
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+/* Mantém apenas o título centralizado para estética */
+.abordagem-text h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
  /* Cronograma e Selo de Atendimento */
