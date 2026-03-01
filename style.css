@@ -606,7 +606,7 @@ body.dark-mode .main-quote {
     }
 
 /* ============================================================
-   SEÇÃO: MINHA ABORDAGEM (CORREÇÃO DE JUSTIFICATIVA)
+   SEÇÃO: MINHA ABORDAGEM (ALINHAMENTO À ESQUERDA)
    ============================================================ */
 
 #abordagem {
@@ -622,14 +622,14 @@ body.dark-mode .main-quote {
     margin: 0 auto;         
 }
 
-/* AJUSTE PARA SIMETRIA TOTAL NA ABORDAGEM */
 #abordagem .abordagem-text {
     width: 100%;
-    max-width: 800px; /* Aumentado levemente para o texto "respirar" */
+    max-width: 800px;
     margin: 0 auto;
     display: block; 
 }
 
+/* Título continua centralizado para manter o equilíbrio visual */
 #abordagem .abordagem-text h2 {
     text-align: center !important;
     margin-bottom: 25px;
@@ -637,26 +637,26 @@ body.dark-mode .main-quote {
     color: var(--secondary);
 }
 
-/* JUSTIFICATIVA DO TEXTO - AJUSTE DE LARGURA */
+/* TEXTO ALINHADO À ESQUERDA - DESKTOP E CELULAR */
 #abordagem .abordagem-text p {
     display: block !important;
     width: 100% !important;
-    text-align: justify !important;   /* Garante as bordas retas */
-    text-justify: inter-word !important; /* Distribui o espaço entre palavras, não letras */
+    text-align: left !important;      /* Alinhamento à esquerda garantido */
     line-height: 1.8;
-    margin-bottom: 20px !important;   /* Espaço entre os dois parágrafos */
+    margin-bottom: 20px !important;   /* Espaço entre parágrafos */
     color: var(--text-color);
 }
+
 /* ============================================================
    RESPONSIVIDADE: AJUSTE PARA CELULAR
    ============================================================ */
 
 @media (max-width: 768px) {
     #abordagem .abordagem-text p {
-        text-align: center !important; /* Volta ao centro no celular para legibilidade */
+        text-align: left !important;  /* Mantém à esquerda inclusive no celular */
         padding: 0 20px;
     }
-}
+
     .bg-light-box {
         padding: 40px 15px;
     }
