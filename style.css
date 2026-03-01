@@ -605,56 +605,87 @@ body.dark-mode .main-quote {
         color: var(--primary);
     }
 
-/* Abordagem Terapêutica (Autoridade) */
-    .bg-light-box {
-        background: var(--card-bg);
-        padding: 50px 20px; /* Reduzi o padding lateral para mobile */
-        border-radius: 20px;
-        margin-top: 40px;
-    }
-    
-    .abordagem-content {
-        display: flex;
-        flex-direction: column; /* Empilha os itens verticalmente */
-        text-align: justify !important; /* O !important garante que vença o center anterior */
-        text-justify: inter-word;
-        hyphens: auto;
-        gap: 30px;
-        max-width: 800px;
-        margin: 0 auto;         /* Centraliza o container na página */
-    }
-    
-    .abordagem-text {
-    flex: none; 
-    width: 100%;
-    text-align: center; /* Adicione esta linha para centralizar o título e o parágrafo */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Garante que elementos internos fiquem no meio */
+/* ============================================================
+   SEÇÃO: MINHA ABORDAGEM (ANTIGA ESPECIALIDADES)
+   ============================================================ */
+
+/* Ajuste de respiro superior da seção */
+#abordagem {
+    padding-top: 30px; 
 }
 
-    /* Caso o parágrafo tenha uma largura máxima para leitura, centralizamos ele também */
-    .abordagem-text p {
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
+/* Caixa de destaque interna */
+.bg-light-box {
+    background: var(--card-bg);
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+/* Alinhamento do conteúdo principal */
+.abordagem-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;         
+}
+
+/* Container do texto */
+.abordagem-text {
+    flex: none; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* Título centralizado para estética */
+#abordagem .abordagem-text h2 {
+    text-align: center !important;
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif !important;
+    color: var(--secondary);
+}
+
+/* JUSTIFICATIVA DO TEXTO (CORREÇÃO DEFINITIVA) */
+#abordagem .abordagem-text p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify !important;   /* Alinha as laterais perfeitamente */
+    text-justify: inter-word !important; /* Melhora o espaçamento entre palavras */
+    display: block !important;         /* Garante comportamento de bloco justificável */
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* Badge/Ícone de destaque */
+.abordagem-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary);
+    gap: 10px;
+}
+
+/* ============================================================
+   RESPONSIVIDADE: AJUSTE PARA CELULAR
+   ============================================================ */
+
+@media (max-width: 768px) {
+    /* No celular, o texto volta a ser centralizado para evitar buracos */
+    #abordagem .abordagem-text p {
+        text-align: center !important; 
+        padding: 0 15px;
+        font-size: 1.05rem;
     }
-    
-    .abordagem-badge {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: var(--primary);
-        gap: 10px;
+
+    .bg-light-box {
+        padding: 40px 15px;
     }
-/* AJUSTE PARA CELULAR (FIM DO ARQUIVO CSS) */
-    @media (max-width: 768px) {
-        #abordagem .split-content p {
-            text-align: justify !important; /* O !important garante que vença o center anterior */
-            text-justify: inter-word;
-            hyphens: auto;
-        }
-    }
+}
  /* Cronograma e Selo de Atendimento */
 
     .info-footer-grid {
