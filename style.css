@@ -606,53 +606,55 @@ body.dark-mode .main-quote {
     }
 
 /* Abordagem Terapêutica (Autoridade) */
-.bg-light-box {
-    background: var(--card-bg);
-    padding: 50px 20px;
-    border-radius: 20px;
-    margin-top: 40px;
-}
-
-.abordagem-content {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    gap: 30px;
-    max-width: 800px;
-    margin: 0 auto;         
-}
-
-.abordagem-text {
+    .bg-light-box {
+        background: var(--card-bg);
+        padding: 50px 20px; /* Reduzi o padding lateral para mobile */
+        border-radius: 20px;
+        margin-top: 40px;
+    }
+    
+    .abordagem-content {
+        display: flex;
+        flex-direction: column; /* Empilha os itens verticalmente */
+        text-align: justify !important; /* O !important garante que vença o center anterior */
+        text-justify: inter-word;
+        hyphens: auto;
+        gap: 30px;
+        max-width: 800px;
+        margin: 0 auto;         /* Centraliza o container na página */
+    }
+    
+    .abordagem-text {
     flex: none; 
     width: 100%;
+    text-align: center; /* Adicione esta linha para centralizar o título e o parágrafo */
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center; /* Garante que elementos internos fiquem no meio */
 }
 
-/* O ERRO ESTAVA AQUI: Usando a classe correta e forçando a justificativa */
-.abordagem-text p {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify !important; /* Força a justificativa sobre o center anterior */
-    text-justify: inter-word;
-    hyphens: auto;
-}
-
-/* Mantém apenas o título centralizado para estética */
-.abordagem-text h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-/* AJUSTE PARA CELULAR (FIM DO ARQUIVO CSS) */
-@media (max-width: 768px) {
-    /* Corrigido de .split-content para .abordagem-text */
-    #abordagem .abordagem-text p {
-        text-align: center !important; /* No celular, o texto volta a ser centralizado para evitar "buracos" no justifica */
-        padding: 0 10px;               /* Adiciona um pequeno respiro lateral para o texto não encostar na borda */
+    /* Caso o parágrafo tenha uma largura máxima para leitura, centralizamos ele também */
+    .abordagem-text p {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
     }
-}
+    
+    .abordagem-badge {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--primary);
+        gap: 10px;
+    }
+/* AJUSTE PARA CELULAR (FIM DO ARQUIVO CSS) */
+    @media (max-width: 768px) {
+        #abordagem .split-content p {
+            text-align: justify !important; /* O !important garante que vença o center anterior */
+            text-justify: inter-word;
+            hyphens: auto;
+        }
+    }
  /* Cronograma e Selo de Atendimento */
 
     .info-footer-grid {
