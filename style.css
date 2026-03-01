@@ -383,20 +383,22 @@ body.dark-mode .main-quote {
     
     /* 3. TÍTULOS E TEXTOS */
     /* SEÇÃO SOBRE MIM - FUNDO BRANCO PURO */
-    #sobre.section-split {
-        background-color: #FFFFFF !important; /* Cor conforme a tabela */
-        padding: 100px 0;
+    /* SEÇÃO SOBRE MIM - ALINHAMENTO À ESQUERDA */
+    #sobre .split-content {
+        text-align: left !important; /* Força o texto para a esquerda */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Alinha o conteúdo interno (incluindo botões) à esquerda */
     }
     
     #sobre .split-content h2 {
-        color: #4F6D6A; /* Verde Profundo para contraste no branco */
+        text-align: left !important; /* Alinha o título "Sobre Mim" à esquerda */
         margin-bottom: 30px;
     }
     
     #sobre .split-content p {
-        color: #2F2F2F; /* Grafite para legibilidade */
+        text-align: left !important; /* Alinha os parágrafos à esquerda */
         margin-bottom: 20px;
-        font-size: 1.1rem;
     }
     .split-content h2 {
         font-family: 'Playfair Display', serif;
@@ -613,38 +615,24 @@ body.dark-mode .main-quote {
     padding-top: 30px; 
 }
 
-.abordagem-content {
-    display: flex;
-    flex-direction: column; 
-    text-align: left; /* Texto à esquerda como você planejou */   
-    gap: 30px;
-    max-width: 800px;
-    margin: 0 auto;         
-}
-
-#abordagem .abordagem-text {
+.abordagem-text {
+    flex: none; 
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    display: block; 
+    display: block; /* Mude de flex para block para soltar o texto */
+    text-align: left; /* Define a base como esquerda */
 }
-
-/* Título continua centralizado para manter o equilíbrio visual */
-#abordagem .abordagem-text h2 {
-    text-align: left; /* Texto à esquerda como você planejou */
-    margin-bottom: 25px;
-    font-family: 'Playfair Display', serif !important;
-    color: var(--secondary);
-}
-
-/* TEXTO ALINHADO À ESQUERDA - DESKTOP E CELULAR */
 #abordagem .abordagem-text p {
-    display: block !important;
-    width: 100% !important;
-    text-align: left !important;      /* Alinhamento à esquerda garantido */
+    max-width: 750px;
+    margin-left: 0; /* Garante que o texto comece na borda esquerda do bloco */
+    margin-right: auto;
+    text-align: left !important; /* Alinhamento à esquerda obrigatório */
     line-height: 1.8;
-    margin-bottom: 20px !important;   /* Espaço entre parágrafos */
-    color: var(--text-color);
+}
+
+/* Mantenha o título centralizado se desejar o equilíbrio visual */
+#abordagem .abordagem-text h2 {
+    text-align: center !important;
+    margin-bottom: 25px;
 }
 
 /* ============================================================
