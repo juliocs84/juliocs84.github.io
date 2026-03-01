@@ -641,6 +641,49 @@ body.dark-mode .main-quote {
         align-items: flex-start !important;
     }
 }
+
+/* ============================================================
+   SEÇÃO: ATENDIMENTO ONLINE (CUIDADO ONDE VOCÊ ESTIVER)
+   ============================================================ */
+
+#online {
+    padding: 100px 0;
+}
+
+/* Força o alinhamento à esquerda para o conteúdo desta seção */
+#online .split-content {
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important; /* Alinha título, texto e link à esquerda */
+}
+
+#online .split-content h2 {
+    text-align: left !important;
+    color: var(--secondary);
+    margin-bottom: 25px;
+}
+
+#online .split-content p {
+    text-align: left !important;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Garante a inversão: Imagem na esquerda, Texto na direita no Desktop */
+#online .split-container.inverted {
+    flex-direction: row-reverse !important;
+}
+
+/* AJUSTE PARA CELULAR: Garante que continue à esquerda no mobile */
+@media (max-width: 768px) {
+    #online .split-content {
+        text-align: left !important;
+        align-items: flex-start !important;
+        padding: 0 20px;
+    }
+}
+
  /* Cronograma e Selo de Atendimento */
 
     .info-footer-grid {
