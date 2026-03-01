@@ -339,13 +339,17 @@ body.dark-mode .main-quote {
         padding: 80px 10%;
     }
     
-    .cards {
-        display: grid;
-        /* Força 3 colunas iguais em telas grandes */
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 30px;
-        margin-top: 40px;
-    }
+.cards {
+    display: grid;
+    /* Força 4 colunas de tamanhos iguais */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; /* Espaço entre os cards */
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1200px; /* Ajuste conforme a largura do seu site */
+    margin-left: auto;
+    margin-right: auto;
+}
     /* 2. ESTRUTURA ZIGUE-ZAGUE (O MOTOR) */
     .section-split {
         padding: 80px 0;
