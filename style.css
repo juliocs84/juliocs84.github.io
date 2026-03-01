@@ -622,10 +622,12 @@ body.dark-mode .main-quote {
     margin: 0 auto;         
 }
 
-.abordagem-text {
-    width: 100%; /* Garante que o container ocupe a largura total */
-    display: block; /* Mudado de flex para block para facilitar a justificativa */
-    text-align: center; /* Mantém o título no centro por padrão */
+/* AJUSTE PARA SIMETRIA TOTAL NA ABORDAGEM */
+#abordagem .abordagem-text {
+    width: 100%;
+    max-width: 800px; /* Aumentado levemente para o texto "respirar" */
+    margin: 0 auto;
+    display: block; 
 }
 
 #abordagem .abordagem-text h2 {
@@ -638,12 +640,11 @@ body.dark-mode .main-quote {
 /* JUSTIFICATIVA DO TEXTO - AJUSTE DE LARGURA */
 #abordagem .abordagem-text p {
     display: block !important;
-    width: 100% !important; /* Força o parágrafo a usar todo o espaço disponível */
-    max-width: 750px;
-    margin: 0 auto !important; /* Centraliza o bloco do parágrafo na tela */
-    text-align: justify !important; /* Alinha as laterais perfeitamente */
-    text-justify: inter-word !important;
+    width: 100% !important;
+    text-align: justify !important;   /* Garante as bordas retas */
+    text-justify: inter-word !important; /* Distribui o espaço entre palavras, não letras */
     line-height: 1.8;
+    margin-bottom: 20px !important;   /* Espaço entre os dois parágrafos */
     color: var(--text-color);
 }
 /* ============================================================
