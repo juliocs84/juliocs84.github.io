@@ -611,8 +611,6 @@ body.dark-mode .main-quote {
         padding: 50px 20px; /* Reduzi o padding lateral para mobile */
         border-radius: 20px;
         margin-top: 40px;
-        text-align: justify; /* Centraliza todo o texto interno */
-        hyphens: auto; /* Evita espços grandes o texto interno */
     }
     
     .abordagem-content {
@@ -651,6 +649,18 @@ body.dark-mode .main-quote {
     #abordagem {
         padding-top: 30px; /* Diminui a distância entre o título e a seção anterior */
     }
+/* Justificar apenas o texto da seção Minha Abordagem */
+    #abordagem .split-content p {
+        text-align: justify;
+        text-justify: inter-word; /* Melhora o espaçamento entre as palavras */
+        hyphens: auto;            /* Adiciona hifens se necessário para evitar buracos no texto */
+    }
+
+@media (max-width: 768px) {
+    #abordagem .split-content p {
+        text-align: center; /* No celular, o texto centralizado costuma acolher melhor */
+    }
+}
 
  /* Cronograma e Selo de Atendimento */
 
