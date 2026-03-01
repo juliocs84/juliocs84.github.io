@@ -645,7 +645,14 @@ body.dark-mode .main-quote {
     text-align: center;
     margin-bottom: 20px;
 }
-
+/* AJUSTE PARA CELULAR (FIM DO ARQUIVO CSS) */
+@media (max-width: 768px) {
+    /* Corrigido de .split-content para .abordagem-text */
+    #abordagem .abordagem-text p {
+        text-align: center !important; /* No celular, o texto volta a ser centralizado para evitar "buracos" no justifica */
+        padding: 0 10px;               /* Adiciona um pequeno respiro lateral para o texto não encostar na borda */
+    }
+}
  /* Cronograma e Selo de Atendimento */
 
     .info-footer-grid {
