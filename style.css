@@ -897,3 +897,7 @@ footer, .footer {
 body.dark-mode .quote-section {
     background-color: #3d5654 !important; /* Um tom de verde ainda mais fechado */
 }
+/* 7. MINHA ABORDAGEM (ALINHAMENTO ESQUERDA) */
+#abordagem .abordagem-text { width: 100%; max-width: 800px; margin: 0 auto; }
+#abordagem .abordagem-text h2 { text-align: center; margin-bottom: 25px; color: var(--secondary); }
+#abordagem .abordagem-text p { text-align: left !important; margin-bottom: 20px; line-height: 1.8; }
