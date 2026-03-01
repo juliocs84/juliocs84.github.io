@@ -606,23 +606,13 @@ body.dark-mode .main-quote {
     }
 
 /* ============================================================
-   SEÇÃO: MINHA ABORDAGEM (ANTIGA ESPECIALIDADES)
+   SEÇÃO: MINHA ABORDAGEM (CORREÇÃO DE JUSTIFICATIVA)
    ============================================================ */
 
-/* Ajuste de respiro superior da seção */
 #abordagem {
     padding-top: 30px; 
 }
 
-/* Caixa de destaque interna */
-.bg-light-box {
-    background: var(--card-bg);
-    padding: 50px 20px;
-    border-radius: 20px;
-    margin-top: 40px;
-}
-
-/* Alinhamento do conteúdo principal */
 .abordagem-content {
     display: flex;
     flex-direction: column; 
@@ -632,16 +622,12 @@ body.dark-mode .main-quote {
     margin: 0 auto;         
 }
 
-/* Container do texto */
 .abordagem-text {
-    flex: none; 
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+    width: 100%; /* Garante que o container ocupe a largura total */
+    display: block; /* Mudado de flex para block para facilitar a justificativa */
+    text-align: center; /* Mantém o título no centro por padrão */
 }
 
-/* Título centralizado para estética */
 #abordagem .abordagem-text h2 {
     text-align: center !important;
     margin-bottom: 25px;
@@ -649,39 +635,27 @@ body.dark-mode .main-quote {
     color: var(--secondary);
 }
 
-/* JUSTIFICATIVA DO TEXTO (CORREÇÃO DEFINITIVA) */
+/* JUSTIFICATIVA DO TEXTO - AJUSTE DE LARGURA */
 #abordagem .abordagem-text p {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify !important;   /* Alinha as laterais perfeitamente */
-    text-justify: inter-word !important; /* Melhora o espaçamento entre palavras */
-    display: block !important;         /* Garante comportamento de bloco justificável */
+    display: block !important;
+    width: 100% !important; /* Força o parágrafo a usar todo o espaço disponível */
+    max-width: 750px;
+    margin: 0 auto !important; /* Centraliza o bloco do parágrafo na tela */
+    text-align: justify !important; /* Alinha as laterais perfeitamente */
+    text-justify: inter-word !important;
     line-height: 1.8;
     color: var(--text-color);
 }
-
-/* Badge/Ícone de destaque */
-.abordagem-badge {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--primary);
-    gap: 10px;
-}
-
 /* ============================================================
    RESPONSIVIDADE: AJUSTE PARA CELULAR
    ============================================================ */
 
 @media (max-width: 768px) {
-    /* No celular, o texto volta a ser centralizado para evitar buracos */
     #abordagem .abordagem-text p {
-        text-align: center !important; 
-        padding: 0 15px;
-        font-size: 1.05rem;
+        text-align: center !important; /* Volta ao centro no celular para legibilidade */
+        padding: 0 20px;
     }
-
+}
     .bg-light-box {
         padding: 40px 15px;
     }
