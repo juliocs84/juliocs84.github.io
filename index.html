@@ -261,6 +261,27 @@
             themeIcon.classList.replace('fa-sun', 'fa-moon');
         }
     });
+</script> 
+
+<script>
+    // 1. Seleciona o ícone hamburguer e o menu de links
+    const menuToggle = document.querySelector('#mobile-menu');
+    const navMenu = document.querySelector('#nav-menu');
+    
+    // 2. Seleciona todos os links (tags <a>) que estão dentro do menu
+    const navLinks = document.querySelectorAll('#nav-menu a');
+
+    // 3. Quando clicar no ícone hamburguer, abre ou fecha o menu
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+
+    // 4. MÁGICA EXTRA: Quando clicar em qualquer link, fecha o menu automaticamente
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+        });
+    });
 </script>    
 </body>
 </html>
